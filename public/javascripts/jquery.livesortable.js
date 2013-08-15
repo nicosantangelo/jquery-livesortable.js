@@ -24,34 +24,51 @@
             cancelRealtime: false,
             cancelSedingInRealtime: false,
 
+            // Custom modificable events mostly used to send custom information in the socket
+            events: {
+                start: function() {},
+                beforeStop: function() {},
+                stop: function() {},
+                mousemove: function() {}
+            },
+
             // jQuery UI options
             sortable: {
                 helper: "clone",
                 start: function(event, ui) {
-                    var liveSortable = jQuery(this).data(pluginDataName);
+                    var liveSortable = LiveSortable.getInstanceFrom(this);
                     var socket = liveSortable.getSocket();
 
-                    socket.emit( eventNamesFactory.addSufix("broadcast_move_started"), {
-                        id: ui.item.get(0).id
-                    } );
+                    var data = liveSortable.events.start(event, ui, liveSortable) || { id: ui.item.get(0).id };
+
+                    socket.emit( eventNamesFactory.addSufix("broadcast_move_started"), data );
 
                     liveSortable.isBeingDragged = true;
                 },
                 beforeStop: function(event, ui) {
-                    var item = ui.item,
-                        next = item.next().get(0),
-                        prev = item.prev().get(0);
-
-                    var socket = jQuery(this).data(pluginDataName).getSocket();
+                    var liveSortable = LiveSortable.getInstanceFrom(this);
+                    var socket = liveSortable.getSocket();
                     
-                    socket.emit( eventNamesFactory.addSufix("broadcast_move_ended"), {
-                        id:   item.get(0).id,
-                        next: next && next.id,
-                        prev: prev && prev.id
-                    } );
+                    var data = liveSortable.events.beforeStop(event, ui, liveSortable);
+
+                    if(!data) {
+                        // Provide the next and previous id of the element being dragged
+                        var item = ui.item;
+                        var next = item.next().get(0);
+                        var prev = item.prev().get(0);
+                        data = {
+                            id:   item.get(0).id,
+                            next: next && next.id,
+                            prev: prev && prev.id
+                        };
+                    }
+
+                    socket.emit( eventNamesFactory.addSufix("broadcast_move_ended"), data );
                 },
                 stop: function(event, ui) {
-                    var liveSortable = jQuery(this).data(pluginDataName);
+                    var liveSortable = LiveSortable.getInstanceFrom(this);
+
+                    liveSortable.events.stop(event, ui, liveSortable);
 
                     liveSortable.isBeingDragged = false;
                 }
@@ -128,6 +145,9 @@
         // Plugin defaults
         this.options = jQuery.extend({}, defaults, options);
 
+        // Custom events
+        this.events = jQuery.extend({}, defaults.events, this.options.events);
+
         // Sortable defaults
         this.sortableOptions = jQuery.extend({}, defaults.sortable, this.options.sortable);
 
@@ -155,19 +175,23 @@
         isBeingDragged: false,
         addMousemoveHandler: function() {
             var self = this;
-            this.$element.on(eventNamesFactory.addSufix("mousemove"), function(event) {
+
+            return this.$element.on(eventNamesFactory.addSufix("mousemove"), function(event) {
                 if(self.isBeingDragged) {
                     var target = event.target;
-                    self._socketEventer.socket.emit(eventNamesFactory.addSufix("broadcast_moving_element"), {
+
+                    var data = self.events.mousemove(event, self) || {
                         id:   target.id,
                         top:  target.style.top,
                         left: target.style.left
-                    });
+                    };
+
+                    self._socketEventer.socket.emit(eventNamesFactory.addSufix("broadcast_moving_element"), data);
                 }
             });
         },
         removeMousemoveHandler: function() {
-            this.$element.off(eventNamesFactory.addSufix("mousemove"));
+            return this.$element.off(eventNamesFactory.addSufix("mousemove"));
         },
         remove: function() {
             this.$element.removeData(pluginDataName).off(eventNamesFactory.sufix);
@@ -194,6 +218,10 @@
                 this.addMousemoveHandler();
             }
         }
+    };
+
+    LiveSortable.getInstanceFrom = function(element) {
+        return jQuery(element).data(pluginDataName);
     };
 
     /* ==============================================

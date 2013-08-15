@@ -7,19 +7,18 @@ describe("The jquery instance", function() {
         expect(this.$list.sortable).toHaveBeenCalled();
     });
 
-    it("should pass sortableOptions to jquery ui", function() {
+    it("should pass sortable object to jquery ui", function() {
+        this.$list.liveSortable({
+            sortable: {
+                helper: ".test",
+                start: "overriden"
+            }
+        });
+
         var sortableOptions = this.$list.sortable.mostRecentCall.args[0];
 
-        // Default options
-        expect(sortableOptions["start"]).toBeDefined();
-        expect(sortableOptions["stop"]).toBeDefined();
-        expect(sortableOptions["beforeStop"]).toBeDefined();
-
-        // Overridden default options
-        expect(sortableOptions["helper"]).toEqual(this.pluginOptions.sortable["helper"]);
-
-        // Non default options
-        expect(sortableOptions["notDefault"]).toBeDefined();
+        expect(sortableOptions["start"]).toEqual("overriden");
+        expect(sortableOptions["helper"]).toEqual(".test");
     });
 
     it("should handle a mousemove event", function() {
@@ -42,5 +41,20 @@ describe("The jquery instance", function() {
 
         expect(spyMoveElementEvent).not.toHaveBeenTriggered();
     });
+    it("should call the custom events stored in the options with three arguments", function() {
+        var events = this.pluginOptions.events;
+
+        this.$firstLi.simulate("dragStart", { dx: 10 });
+        expect( this.getLastArguments(events.start).length ).toEqual(3);
+
+        this.$firstLi.simulate("dragEnd");
+        expect( this.getLastArguments(events.beforeStop).length ).toEqual(3);
+        expect( this.getLastArguments(events.stop).length ).toEqual(3);
+    });
+    it("should call the custom mousemove event", function() {
+        this.emulateMouseMoveOn(this.$firstLi);
+        expect( this.getLastArguments(this.pluginOptions.events.mousemove).length ).toEqual(2);
+    });
+
 
 });

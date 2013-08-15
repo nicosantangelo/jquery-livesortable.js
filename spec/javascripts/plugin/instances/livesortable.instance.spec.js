@@ -52,6 +52,6 @@ describe("The stored LiveSortable instance", function() {
 
         //...the next reenables it
         this.toggleRealtimeSending();
-        expect(this.socketMock.emit).wasCalledWith("broadcast_moving_element.liveSortable", jasmine.any(Object));
+        expect(this.socketMock.emit).wasCalledWith("broadcast_moving_element.liveSortable", this.pluginOptions.events.mousemove());
     });
 });

@@ -1,9 +1,21 @@
 beforeEach(function() {
 	this.pluginOptions = {
         socketUrl: "http://localhost:5000",
-        sortable: {
-            helper: ".test",
-            notDefault: function() {}
+        events: {
+            start: function(event, ui, liveSortable) {
+                // Return something here, so we can check if the socket gets called with it
+                return "overriden";
+            },
+            beforeStop: function(event, ui, liveSortable) {
+                // Don't return anything, use the default
+            },
+            stop: function(event, ui, liveSortable) {
+                // The return value it's not important here, it can be used to do some calculations
+            },
+            mousemove: function(event, liveSortable) {
+                // Override the mousemove data too
+                return "overriden";
+            }
         }
     };
 
@@ -31,17 +43,23 @@ beforeEach(function() {
     this.startPluginWithSocketMock = function($element, pluginOptions) {
     	var socketMock;
 
+        // Default options to use
+        pluginOptions = pluginOptions || this.pluginOptions;
+
         // Create a socket mock
         socketMock = this.createSocketMock();
 
         // Return the mock on connect
         spyOn(io, "connect").andReturn(socketMock);
 
+        // Spy on the custom events passed as arguments
+        this.spyEventsOption(pluginOptions);
+
         // Spy on the sortable method and...
     	spyOn($element, "sortable").andCallThrough();
 
         // ...start the plugin
-        $element.liveSortable(pluginOptions || this.pluginOptions);
+        $element.liveSortable(pluginOptions);
 
     	return socketMock;
     };
@@ -66,6 +84,12 @@ beforeEach(function() {
 
         return socketMock;
     }
+
+    this.spyEventsOption = function(options) {
+        for(var event in options.events) {
+            spyOn(options.events, event).andCallThrough();
+        }
+    };
 
     this.getPluginInstance = function($element) {
     	return $element.data("plugin_liveSortable");
@@ -94,4 +118,8 @@ beforeEach(function() {
     this.emulateMouseMoveOn = function($element) {
         $element.simulate("dragStart", { dx: 10 }).simulate("mousemove").simulate("dragEnd");
     };
+
+    this.getLastArguments = function(method) {
+        return method.calls[0].args;
+    }
 });
