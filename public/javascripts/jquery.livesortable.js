@@ -178,13 +178,17 @@
 
             return this.$element.on(eventNamesFactory.addSufix("mousemove"), function(event) {
                 if(self.isBeingDragged) {
-                    var target = event.target;
 
-                    var data = self.events.mousemove(event, self) || {
-                        id:   target.id,
-                        top:  target.style.top,
-                        left: target.style.left
-                    };
+                    var data = self.events.mousemove(event, self);
+
+                    if(!data) {
+                        var elem = self.$element.children(".ui-sortable-helper").get(0);
+                        data = {
+                            id:   elem.id,
+                            top:  elem.style.top,
+                            left: elem.style.left
+                        };
+                    }
 
                     self._socketEventer.socket.emit(eventNamesFactory.addSufix("broadcast_moving_element"), data);
                 }
