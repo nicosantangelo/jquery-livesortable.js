@@ -48,7 +48,7 @@ beforeEach(function() {
         this.spyEventsOption(this.pluginOptions);
 
         // Spy on the sortable method and...
-    	spyOn($element, "sortable").andCallThrough();
+    	spyOn(jQuery.fn, "sortable").andCallThrough();
 
         // ...start the plugin
         $element.liveSortable(this.pluginOptions);

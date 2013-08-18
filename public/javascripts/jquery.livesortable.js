@@ -12,8 +12,6 @@
     var pluginName = "liveSortable",
         pluginDataName = "plugin_" + pluginName;
 
-    var isDragging = false;
-     
     // LiveSortable Defaults
     var defaults = {
             // Realtime options
@@ -244,30 +242,34 @@
        ============================================== */
 
     jQuery.fn[pluginName] = function ( options ) {
-
-        // When the first argument is a string, call a method on the instance with that string as the method name
-        // Otherwise instantiate the plugin
-        if (typeof options === 'string') {
+        var isMethod = typeof options === 'string';
+        if(isMethod) {
             var methodArguments = Array.prototype.slice.call(arguments, 1);
-
-            var instance = this.data(pluginDataName);
-            if (!instance) {
-                throw "Method called on liveSortable before instantiation";
-            }
-            if ( !jQuery.isFunction(instance[options]) ) {
-                throw "The method: " + options + " was not found in liveSortable";
-            }
-
-            var returnValue = instance[options].apply(instance, methodArguments);
-
-            if (returnValue !== undefined) {
-                return returnValue;
-            }
-        } else {
-            this.data(pluginDataName, new LiveSortable(this, options));
         }
-            
-        return this;
+
+        return this.each(function() {
+            var $this = jQuery(this);
+
+            // When the first argument is a string, call a method on the instance with that string as the method name
+            // Otherwise instantiate the plugin
+            if (isMethod) {
+                var instance = $this.data(pluginDataName);
+                if (!instance) {
+                    throw "Method called on liveSortable before instantiation";
+                }
+                if ( !jQuery.isFunction(instance[options]) ) {
+                    throw "The method: " + options + " was not found in liveSortable";
+                }
+
+                var returnValue = instance[options].apply(instance, methodArguments);
+
+                if (returnValue !== undefined) {
+                    return returnValue;
+                }
+            } else {
+                $this.data(pluginDataName, new LiveSortable($this, options));
+            }
+        });
     };
 
 })(window, document);
