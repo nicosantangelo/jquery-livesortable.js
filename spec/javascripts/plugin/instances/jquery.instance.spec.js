@@ -9,6 +9,7 @@ describe("The jquery instance", function() {
 
     it("should pass sortable object to jquery ui", function() {
         this.$list.liveSortable({
+            socket: this.socketMock,
             sortable: {
                 helper: ".test",
                 start: "overriden"
@@ -19,6 +20,13 @@ describe("The jquery instance", function() {
 
         expect(sortableOptions["start"]).toEqual("overriden");
         expect(sortableOptions["helper"]).toEqual(".test");
+    });
+
+    it("should throw if no socket is passed", function() {
+        var self = this;
+        expect(function() {
+            self.$list.liveSortable({sortable: {}});
+        }).toThrow(new Error("A socket must be passed as an argument to use liveSortable."));
     });
 
     it("should handle a mousemove event", function() {

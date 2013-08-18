@@ -15,10 +15,6 @@ describe("The stored LiveSortable instance", function() {
        expect(this.liveSortable.getSocket()).toEqual(this.socketMock);      
     });
 
-    it("should use the url option to connect to socketio", function() {
-        expect(io.connect).wasCalledWith(this.pluginOptions.socketUrl);
-    });
-
     it("should delete the plugin when remove is called", function() {
         this.liveSortable.remove();
 

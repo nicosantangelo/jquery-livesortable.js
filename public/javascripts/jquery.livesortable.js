@@ -8,10 +8,6 @@
     if (jQuery().sortable === undefined) {
         throw "jQuery UIs sortable should be defined to use liveSortable";
     }
-    if (io === undefined) {
-        throw "SocketIO should be defined to use liveSortable";
-    }
-
 
     var pluginName = "liveSortable",
         pluginDataName = "plugin_" + pluginName;
@@ -106,7 +102,11 @@
 
         this.$element = liveSortable.$element;
 
-        this.socket = io.connect(liveSortable.options.socketUrl);
+        if(liveSortable.options.socket === undefined) {
+            throw "A socket must be passed as an argument to use liveSortable.";
+        }
+
+        this.socket = liveSortable.options.socket;
 
         // Listen every event on the socket and trigger it on the stored element
         jQuery.each(liveSortable.customEvents, function(index, customEvent) {

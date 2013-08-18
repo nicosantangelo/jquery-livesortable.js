@@ -17,7 +17,6 @@ src_files:
     - public/javascripts/jquery/jquery.ui.mouse.js
     - public/javascripts/jquery/jquery.ui.sortable.js
     - public/javascripts/jquery/jquery.ui.effect.js
-    - node_modules/socket.io/node_modules/socket.io-client/dist/socket.io.js
     - public/javascripts/*.js
     - spec/javascripts/extensions/*.js
 

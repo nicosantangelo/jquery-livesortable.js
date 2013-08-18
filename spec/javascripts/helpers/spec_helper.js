@@ -1,6 +1,6 @@
 beforeEach(function() {
 	this.pluginOptions = {
-        socketUrl: "http://localhost:5000",
+        socket: undefined,
         events: {
             start: function(event, ui, liveSortable) {
                 // Return something here, so we can check if the socket gets called with it
@@ -49,8 +49,8 @@ beforeEach(function() {
         // Create a socket mock
         socketMock = this.createSocketMock();
 
-        // Return the mock on connect
-        spyOn(io, "connect").andReturn(socketMock);
+        // Add the socket to the options
+        pluginOptions.socket = socketMock;
 
         // Spy on the custom events passed as arguments
         this.spyEventsOption(pluginOptions);
