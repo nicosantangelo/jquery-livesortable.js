@@ -40,28 +40,20 @@ beforeEach(function() {
     	return $(selector || "#list");
     };
 
-    this.startPluginWithSocketMock = function($element, pluginOptions) {
-    	var socketMock;
-
-        // Default options to use
-        pluginOptions = pluginOptions || this.pluginOptions;
-
-        // Create a socket mock
-        socketMock = this.createSocketMock();
-
-        // Add the socket to the options
-        pluginOptions.socket = socketMock;
+    this.startPluginWithSocketMock = function($element) {
+        // Create a socket mock and add the socket to the options
+        this.pluginOptions.socket = this.createSocketMock();
 
         // Spy on the custom events passed as arguments
-        this.spyEventsOption(pluginOptions);
+        this.spyEventsOption(this.pluginOptions);
 
         // Spy on the sortable method and...
     	spyOn($element, "sortable").andCallThrough();
 
         // ...start the plugin
-        $element.liveSortable(pluginOptions);
+        $element.liveSortable(this.pluginOptions);
 
-    	return socketMock;
+    	return this.pluginOptions.socket;
     };
 
     this.createSocketMock = function() {
@@ -101,8 +93,9 @@ beforeEach(function() {
         // Delete the previous instance of the plugin
         this.liveSortable.remove();
 
-        //Start a new one and return the jQuery instance
-        return this.$list.liveSortable(newOptions);
+        //Start a new plugin instance and setup the firstLi
+        this.$list.liveSortable(newOptions);
+        this.$firstLi = this.$list.children("li:first");
     }
 
     this.toggleRealtime = function() {
@@ -112,11 +105,18 @@ beforeEach(function() {
 
     this.toggleRealtimeSending = function() {
         this.$list.liveSortable("toggleRealtimeSending");
-        this.emulateMouseMoveOn(this.$firstLi);
+        this.emulateMousemoveOn(this.$firstLi);
     }
 
-    this.emulateMouseMoveOn = function($element) {
-        $element.simulate("dragStart", { dx: 10 }).simulate("mousemove").simulate("dragEnd");
+    this.emulateMousemoveOn = function($element, times) {
+        var times = times || 1;
+        $element.simulate("dragStart", { dx: 10 })
+
+        while(times--) {
+            $element.simulate("mousemove")
+        }
+        
+        $element.simulate("dragEnd");
     };
 
     this.getLastArguments = function(method) {

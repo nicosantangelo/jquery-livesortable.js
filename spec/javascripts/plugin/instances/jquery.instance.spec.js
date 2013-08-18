@@ -23,10 +23,8 @@ describe("The jquery instance", function() {
     });
 
     it("should throw if no socket is passed", function() {
-        var self = this;
-        expect(function() {
-            self.$list.liveSortable({sortable: {}});
-        }).toThrow(new Error("A socket must be passed as an argument to use liveSortable."));
+        var $list = this.$list;
+        expect(function() { $list.liveSortable({ sortable: {} }); }).toThrow(new Error("A socket must be passed as an argument to use liveSortable."));
     });
 
     it("should handle a mousemove event", function() {
@@ -44,7 +42,7 @@ describe("The jquery instance", function() {
     it("should not trigger the move_element.liveSortable event if the cancelRealtime option is set to true", function() {
         var $newList = this.resetPlugin({ cancelRealtime: true });
 
-        var spyMoveElementEvent = spyOnEvent($newList, "move_element.liveSortable");
+        var spyMoveElementEvent = spyOnEvent(this.$list, "move_element.liveSortable");
         this.socketMock.emit("move_element.liveSortable");
 
         expect(spyMoveElementEvent).not.toHaveBeenTriggered();
@@ -60,7 +58,7 @@ describe("The jquery instance", function() {
         expect( this.getLastArguments(events.stop).length ).toEqual(3);
     });
     it("should call the custom mousemove event", function() {
-        this.emulateMouseMoveOn(this.$firstLi);
+        this.emulateMousemoveOn(this.$firstLi);
         expect( this.getLastArguments(this.pluginOptions.events.mousemove).length ).toEqual(2);
     });
 

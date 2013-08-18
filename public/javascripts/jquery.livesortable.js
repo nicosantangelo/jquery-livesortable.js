@@ -20,6 +20,9 @@
             cancelRealtime: false,
             cancelSedingInRealtime: false,
 
+            // MouseMove event delay
+            delay: 0,
+
             // Custom modificable events mostly used to send custom information in the socket
             events: {
                 start: function() {},
@@ -178,7 +181,6 @@
 
             return this.$element.on(eventNamesFactory.addSufix("mousemove"), function(event) {
                 if(self.isBeingDragged) {
-
                     var data = self.events.mousemove(event, self);
 
                     if(!data) {
@@ -191,6 +193,12 @@
                     }
 
                     self._socketEventer.socket.emit(eventNamesFactory.addSufix("broadcast_moving_element"), data);
+
+                    if(self.options.delay > 0) {
+                        // This is not abstracted to a different function (sadly) so we retain the outer scope for the setTimeout // and "minimize" complexity for performance.
+                        self.removeMousemoveHandler();
+                        setTimeout(function() { self.addMousemoveHandler(); }, self.options.delay);
+                    }
                 }
             });
         },
