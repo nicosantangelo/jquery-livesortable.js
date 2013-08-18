@@ -4,10 +4,10 @@ describe("The stored LiveSortable instance", function() {
     });
 
     it("should return true if the element that's being dragged", function() {
-        this.$firstLi.simulate("dragStart", { dx: 10 });
+        this.simulateDragStart();
         expect(this.liveSortable.isBeingDragged).toBeTruthy();
 
-        this.$firstLi.simulate("dragEnd");
+        this.simulateDragEnd();
         expect(this.liveSortable.isBeingDragged).toBeFalsy();
     });
 

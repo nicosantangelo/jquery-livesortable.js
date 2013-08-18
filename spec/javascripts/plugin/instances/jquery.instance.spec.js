@@ -50,15 +50,15 @@ describe("The jquery instance", function() {
     it("should call the custom events stored in the options with three arguments", function() {
         var events = this.pluginOptions.events;
 
-        this.$firstLi.simulate("dragStart", { dx: 10 });
+        this.simulateDragStart();
         expect( this.getLastArguments(events.start).length ).toEqual(3);
 
-        this.$firstLi.simulate("dragEnd");
+        this.simulateDragEnd();
         expect( this.getLastArguments(events.beforeStop).length ).toEqual(3);
         expect( this.getLastArguments(events.stop).length ).toEqual(3);
     });
     it("should call the custom mousemove event", function() {
-        this.emulateMousemoveOn(this.$firstLi);
+        this.simulateMousemove();
         expect( this.getLastArguments(this.pluginOptions.events.mousemove).length ).toEqual(2);
     });
 

@@ -105,18 +105,28 @@ beforeEach(function() {
 
     this.toggleRealtimeSending = function() {
         this.$list.liveSortable("toggleRealtimeSending");
-        this.emulateMousemoveOn(this.$firstLi);
+        this.simulateMousemove();
     }
 
-    this.emulateMousemoveOn = function($element, times) {
-        var times = times || 1;
-        $element.simulate("dragStart", { dx: 10 })
+    this.simulateMousemove = function(times, $element) {
+        times = times || 1;
+        $element = $element || this.$firstLi;
+
+        this.simulateDragStart($element);
 
         while(times--) {
             $element.simulate("mousemove")
         }
-        
-        $element.simulate("dragEnd");
+
+        this.simulateDragEnd($element);
+    };
+
+    this.simulateDragStart = function($element) {
+        ($element || this.$firstLi).simulate("dragStart", { dx: 10 });
+    };
+
+    this.simulateDragEnd = function($element) {
+        ($element || this.$firstLi).simulate("dragEnd");
     };
 
     this.getLastArguments = function(method) {
