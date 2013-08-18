@@ -229,6 +229,9 @@
             } else {
                 this.addMousemoveHandler();
             }
+        },
+        delay: function(time) {
+            this.options.delay = time;
         }
     };
 

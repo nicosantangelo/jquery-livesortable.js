@@ -50,4 +50,10 @@ describe("The stored LiveSortable instance", function() {
         this.toggleRealtimeSending();
         expect(this.socketMock.emit).wasCalledWith("broadcast_moving_element.liveSortable", this.pluginOptions.events.mousemove());
     });
+    it("should set the delay option on delay", function() {
+       expect(this.liveSortable.options.delay).toBe(0);       
+
+       this.$list.liveSortable("delay", 100);
+       expect(this.liveSortable.options.delay).toBe(100);       
+    });
 });
