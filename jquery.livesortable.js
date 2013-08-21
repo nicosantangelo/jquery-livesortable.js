@@ -1,11 +1,11 @@
-;(function (window, document, undefined) {
+;(function ($, undefined) {
     "use strict";
 
     // Dependencies
-    if (jQuery === undefined) {
+    if ($ === undefined) {
         throw "jQuery should be defined to use liveSortable";
     }
-    if (jQuery().sortable === undefined) {
+    if (!"sortable" in $.fn) {
         throw "jQuery UIs sortable should be defined to use liveSortable";
     }
 
@@ -89,7 +89,7 @@
             if(liveSortable.options.cancelRealtime) {
                 eventNames = eventNames.slice(1);
             }
-            return jQuery.map(eventNames, this.addSufix);
+            return $.map(eventNames, this.addSufix);
         }
     }
 
@@ -110,7 +110,7 @@
         this.socket = liveSortable.options.socket;
 
         // Listen every event on the socket and trigger it on the stored element
-        jQuery.each(liveSortable.customEvents, function(index, customEvent) {
+        $.each(liveSortable.customEvents, function(index, customEvent) {
             self.addEvent( customEvent );
         });
 
@@ -144,13 +144,13 @@
         this.$element = jqueryInstance;
 
         // Plugin defaults
-        this.options = jQuery.extend({}, defaults, options);
+        this.options = $.extend({}, defaults, options);
 
         // Custom events
-        this.events = jQuery.extend({}, defaults.events, this.options.events);
+        this.events = $.extend({}, defaults.events, this.options.events);
 
         // Sortable defaults
-        this.sortableOptions = jQuery.extend({}, defaults.sortable, this.options.sortable);
+        this.sortableOptions = $.extend({}, defaults.sortable, this.options.sortable);
 
         // Start jqueryui sortable
         this.$element.sortable(this.sortableOptions);
@@ -234,21 +234,21 @@
     };
 
     LiveSortable.getInstanceFrom = function(element) {
-        return jQuery(element).data(pluginDataName);
+        return $(element).data(pluginDataName);
     };
 
     /* ==============================================
         jQuery Plugin initialization
        ============================================== */
 
-    jQuery.fn[pluginName] = function ( options ) {
+    $.fn[pluginName] = function ( options ) {
         var isMethod = typeof options === 'string';
         if(isMethod) {
             var methodArguments = Array.prototype.slice.call(arguments, 1);
         }
 
         return this.each(function() {
-            var $this = jQuery(this);
+            var $this = $(this);
 
             // When the first argument is a string, call a method on the instance with that string as the method name
             // Otherwise instantiate the plugin
@@ -257,7 +257,7 @@
                 if (!instance) {
                     throw "Method called on liveSortable before instantiation";
                 }
-                if ( !jQuery.isFunction(instance[options]) ) {
+                if ( !$.isFunction(instance[options]) ) {
                     throw "The method: " + options + " was not found in liveSortable";
                 }
 
@@ -272,4 +272,4 @@
         });
     };
 
-})(window, document);
+})( jQuery );
