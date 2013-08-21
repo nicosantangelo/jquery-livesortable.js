@@ -1,0 +1,2025 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"hide",
+				"hideTicket"
+			],
+			[
+				"add",
+				"addTickets"
+			],
+			[
+				"acti",
+				"activity"
+			],
+			[
+				"Ac",
+				"Activity"
+			],
+			[
+				"ac",
+				"activity"
+			],
+			[
+				"li",
+				"listenTo"
+			],
+			[
+				"sho",
+				"showActivitiesView"
+			],
+			[
+				"activit",
+				"activity"
+			],
+			[
+				"aso",
+				"associations"
+			],
+			[
+				"asso",
+				"association"
+			],
+			[
+				"ad",
+				"addAssociations"
+			],
+			[
+				"cons",
+				"constructor"
+			],
+			[
+				"atr",
+				"attributes"
+			],
+			[
+				"an",
+				"any	any"
+			],
+			[
+				"ass",
+				"associativeTicket"
+			],
+			[
+				"set",
+				"select	.select()"
+			],
+			[
+				"_",
+				"_capitalize"
+			],
+			[
+				"as",
+				"associativeTicket"
+			],
+			[
+				"ins",
+				"instance"
+			],
+			[
+				"attr",
+				"attributes"
+			],
+			[
+				"pr",
+				"priority"
+			],
+			[
+				"pro",
+				"projects_users"
+			],
+			[
+				"ti",
+				"ticket"
+			],
+			[
+				"pri",
+				"priority_id"
+			],
+			[
+				"res",
+				"respond_with"
+			],
+			[
+				"se",
+				"searchable_object"
+			],
+			[
+				"ticket",
+				"ticket_states"
+			],
+			[
+				"com",
+				"commentable"
+			],
+			[
+				"for",
+				"forRequest"
+			],
+			[
+				"re",
+				"requestObj"
+			],
+			[
+				"commentab",
+				"commentable_id"
+			],
+			[
+				"fo",
+				"for	for (…) {…}"
+			],
+			[
+				"ini",
+				"initializeSubViews"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"f",
+				"f	Anonymous Function"
+			],
+			[
+				"comm",
+				"commentsView"
+			],
+			[
+				"tic",
+				"tickets"
+			],
+			[
+				"follow",
+				"following"
+			],
+			[
+				"user",
+				"User"
+			],
+			[
+				"strg",
+				"string-like"
+			],
+			[
+				"meth",
+				"method_name"
+			],
+			[
+				"leve",
+				"class_level_wag"
+			],
+			[
+				"class",
+				"class_level_wag"
+			],
+			[
+				"in",
+				"in_object"
+			],
+			[
+				"chico",
+				"Chico"
+			],
+			[
+				"Ha",
+				"HAPPY"
+			],
+			[
+				"has",
+				"has_many"
+			],
+			[
+				"picture",
+				"PictureSeen"
+			],
+			[
+				"cur",
+				"current_user"
+			],
+			[
+				"col",
+				"collection"
+			],
+			[
+				"current",
+				"current_user"
+			],
+			[
+				"cu",
+				"current_user"
+			],
+			[
+				"curr",
+				"current_user"
+			],
+			[
+				"lam",
+				"lam	lambda { |args| .. }"
+			],
+			[
+				"current_",
+				"current_country"
+			],
+			[
+				"visi",
+				"visible_for"
+			],
+			[
+				"la",
+				"lambda"
+			],
+			[
+				"co",
+				"country"
+			],
+			[
+				"block",
+				"blocked_users"
+			],
+			[
+				"fil",
+				"filtered_roll"
+			],
+			[
+				"dice",
+				"dice_index"
+			],
+			[
+				"roll",
+				"roll_score"
+			],
+			[
+				"tri",
+				"tripled_dice_value"
+			],
+			[
+				"trip",
+				"get_tripled_dice"
+			],
+			[
+				"get",
+				"get_triple_score"
+			],
+			[
+				"single",
+				"single_roll"
+			],
+			[
+				"Gre",
+				"GreedScore"
+			],
+			[
+				"file",
+				"file_sandwich"
+			],
+			[
+				"all",
+				"all_sides_greater_than_zero"
+			],
+			[
+				"Trian",
+				"TriangleError"
+			],
+			[
+				"My",
+				"MySpecialError"
+			],
+			[
+				"Stan",
+				"StandardError"
+			],
+			[
+				"ex",
+				"exception_handled"
+			],
+			[
+				"stan",
+				"StandardError"
+			],
+			[
+				"Runtime",
+				"RuntimeError"
+			],
+			[
+				"is",
+				"is_isosceles"
+			],
+			[
+				"amoun",
+				"amount_equal"
+			],
+			[
+				"false",
+				"false_value"
+			],
+			[
+				"fal",
+				"false_value"
+			],
+			[
+				"true",
+				"true_value"
+			],
+			[
+				"retur",
+				"return_value"
+			],
+			[
+				"Ar",
+				"ArgumentError"
+			],
+			[
+				"cat",
+				"catsAndDogs"
+			],
+			[
+				"desc",
+				"description"
+			],
+			[
+				"obj",
+				"objToAssign"
+			],
+			[
+				"pub",
+				"publicObject"
+			],
+			[
+				"na",
+				"namespaces"
+			],
+			[
+				"nam",
+				"namespace"
+			],
+			[
+				"ob",
+				"obj"
+			],
+			[
+				"de",
+				"definedObj"
+			],
+			[
+				"len",
+				"length"
+			],
+			[
+				"inn",
+				"innerChannel"
+			],
+			[
+				"cha",
+				"channel"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"wu",
+				"wumbla"
+			],
+			[
+				"con",
+				"contexts"
+			],
+			[
+				"wum",
+				"wumblaChannel"
+			],
+			[
+				"conte",
+				"contexts"
+			],
+			[
+				"call",
+				"callbacks"
+			],
+			[
+				"cot",
+				"context"
+			],
+			[
+				"sub",
+				"subscribe"
+			],
+			[
+				"sus",
+				"subscribe"
+			],
+			[
+				"ke",
+				"key"
+			],
+			[
+				"Confi",
+				"CONFIG_FILE_NAME"
+			],
+			[
+				"js",
+				"JsonManager"
+			],
+			[
+				"blo",
+				"block_given"
+			],
+			[
+				"par",
+				"parse_option"
+			],
+			[
+				"paramet",
+				"parameter"
+			],
+			[
+				"key",
+				"key_or_hash"
+			],
+			[
+				"COn",
+				"CONFIG_FILE_NAME"
+			],
+			[
+				"def",
+				"def	def … end"
+			],
+			[
+				"congi",
+				"configuration_file_created"
+			],
+			[
+				"json",
+				"json_configuration_hash"
+			],
+			[
+				"CON",
+				"Configuration"
+			],
+			[
+				"J",
+				"JsonManager"
+			],
+			[
+				"j",
+				"json_content"
+			],
+			[
+				"bl",
+				"block_given"
+			],
+			[
+				"dow",
+				"downcase"
+			],
+			[
+				"scan",
+				"scan_match"
+			],
+			[
+				"defin",
+				"define_output_methods"
+			],
+			[
+				"Ou",
+				"OuputHelper"
+			],
+			[
+				"section",
+				"section_to_output"
+			],
+			[
+				"out",
+				"output_from_file"
+			],
+			[
+				"sec",
+				"section_to_output"
+			],
+			[
+				"ou",
+				"output_file_name"
+			],
+			[
+				"ar",
+				"arguments"
+			],
+			[
+				"arg",
+				"arguments_valid"
+			],
+			[
+				"colo",
+				"color_code"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/Ruby/Ruby.sublime-build",
+	"command_palette":
+	{
+		"height": 125.0,
+		"selected_items":
+		[
+			[
+				"commi",
+				"Git: Commit"
+			],
+			[
+				"che",
+				"Git: Checkout Current File"
+			],
+			[
+				"hide",
+				"Guard: Hide Guard Output"
+			],
+			[
+				"Set Syntax ry",
+				"Set Syntax: Ruby"
+			],
+			[
+				"start",
+				"Guard: Start Guard"
+			],
+			[
+				"stop",
+				"Guard: Stop Guard"
+			],
+			[
+				"commit",
+				"Git: Commit"
+			],
+			[
+				"Set Syntax html",
+				"Set Syntax: HTML"
+			],
+			[
+				"stopg",
+				"Guard: Stop Guard"
+			],
+			[
+				"pac",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"new",
+				"Tasks: New document"
+			],
+			[
+				"comit",
+				"Git: Commit"
+			],
+			[
+				"run",
+				"Guard: Run all Tests"
+			],
+			[
+				"sta",
+				"Guard: Start Guard"
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add..."
+			],
+			[
+				"check",
+				"Git: Checkout Current File"
+			],
+			[
+				"reset",
+				"Git: Reset (unstage) Current File"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"Set Syntax rails",
+				"Set Syntax: HTML (Rails)"
+			],
+			[
+				"Set Syntax javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"log",
+				"Git: Log Current File"
+			],
+			[
+				"lo",
+				"Git: Log Current File"
+			],
+			[
+				"star",
+				"Guard: Start Guard"
+			],
+			[
+				"Set Syntax htmlrai",
+				"Set Syntax: HTML (Rails)"
+			],
+			[
+				"Set Syntax rsp",
+				"Set Syntax: RSpec"
+			],
+			[
+				"Set Syntax r",
+				"Set Syntax: Ruby"
+			],
+			[
+				"Install Package",
+				"Package Control: Install Package"
+			],
+			[
+				"pull",
+				"Git: Pull"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"task",
+				"Tasks: New"
+			],
+			[
+				"Set Syntax css",
+				"Set Syntax: CSS"
+			],
+			[
+				"Set Syntax htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"newdo",
+				"Tasks: New document"
+			],
+			[
+				"tas",
+				"Tasks: New"
+			],
+			[
+				"Set Syntax js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"Set Syntax htmlr",
+				"Set Syntax: HTML (Rails)"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Set Syntax javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"jaa",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"Set Syntax ru",
+				"Set Syntax: Ruby"
+			],
+			[
+				"Set Syntax tas",
+				"Set Syntax: Tasks"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"Git:",
+				"Git: Commit history"
+			],
+			[
+				"Set Syntax py",
+				"Set Syntax: Python"
+			],
+			[
+				"syn",
+				"Set Syntax: Scala"
+			],
+			[
+				"Set Syntax ",
+				"Set Syntax: C++"
+			],
+			[
+				"bran",
+				"Git: Change Branch"
+			],
+			[
+				"Set Syntax jas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"sendb",
+				"Send current file by e-mail"
+			],
+			[
+				"logc",
+				"Git: Log Current File"
+			],
+			[
+				"logf",
+				"Git: Log Current File"
+			],
+			[
+				"arch",
+				"Tasks: Archive"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
+			[
+				"righ",
+				"Origami: Create Pane on the Right"
+			],
+			[
+				"ev",
+				"RubyEval: ruby_eval"
+			],
+			[
+				"eva",
+				"RubyEval: ruby_eval"
+			],
+			[
+				"eval",
+				"RubyEval: ruby_eval"
+			],
+			[
+				"ruby",
+				"RubyEval: ruby_eval"
+			],
+			[
+				"forma",
+				"Format: Ruby"
+			],
+			[
+				"for",
+				"Format: Ruby"
+			],
+			[
+				"or",
+				"Origami: Destroy Pane Below"
+			],
+			[
+				"form",
+				"Format: Ruby"
+			],
+			[
+				"case",
+				"Convert Case: Swap Case"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"set syntax ry",
+				"Set Syntax: Ruby"
+			],
+			[
+				"set syntax javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"set syntax html",
+				"Set Syntax: HTML"
+			],
+			[
+				"set syntax c#",
+				"Set Syntax: C#"
+			],
+			[
+				"remv",
+				"Package Control: Remove Package"
+			],
+			[
+				"set syntax ru",
+				"Set Syntax: Ruby"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"set syntax h",
+				"Set Syntax: HTML"
+			],
+			[
+				"pack",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"emme",
+				"Emmet: Expand Abbreviation"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"r",
+				"RubyEval: ruby_eval"
+			],
+			[
+				"ry",
+				"RubyEval: ruby_eval"
+			],
+			[
+				"ru",
+				"RubyEval: ruby_eval"
+			],
+			[
+				"rub",
+				"RubyEval: ruby_eval"
+			],
+			[
+				"set syntax java",
+				"Set Syntax: Java"
+			],
+			[
+				":",
+				":e - Revert"
+			],
+			[
+				"set syntax javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"set syntax asp",
+				"Set Syntax: ASP"
+			],
+			[
+				"syn html",
+				"Set Syntax: HTML"
+			],
+			[
+				"syn sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"syn css",
+				"Set Syntax: CSS"
+			],
+			[
+				"syn php",
+				"Set Syntax: PHP"
+			],
+			[
+				"syn javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"syn ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"synhtml",
+				"Set Syntax: HTML (Rails)"
+			],
+			[
+				"syn h",
+				"Set Syntax: HTML"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"lint",
+				"JSLint: Run JSLint"
+			],
+			[
+				"sni j",
+				"Snippet: jQuerySnippet"
+			],
+			[
+				"format",
+				"Format: Javascript"
+			],
+			[
+				"new fi",
+				"File: New File Relative to Current View"
+			],
+			[
+				"syn pgp",
+				"Set Syntax: Java Server Page (JSP)"
+			],
+			[
+				"prefix",
+				"Preferences: Prefixr Key Bindings – Default"
+			],
+			[
+				"css",
+				"Emmet: Reflect CSS Value"
+			],
+			[
+				"syn sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"expand",
+				"Emmet: Expand Abbreviation"
+			],
+			[
+				"syn rub",
+				"Set Syntax: Ruby"
+			],
+			[
+				"syntajavas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"syntahtml",
+				"Set Syntax: HTML5"
+			],
+			[
+				"syn javast",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"Pack",
+				"Package Control: Discover Packages"
+			],
+			[
+				"",
+				"File: Open In Browser - Testing Server"
+			],
+			[
+				"togg",
+				"Toggle Comment"
+			],
+			[
+				"syn tex",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"syn ",
+				"Set Syntax: Ruby"
+			],
+			[
+				"syn js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"syn mak",
+				"Set Syntax: Makefile"
+			],
+			[
+				"syn c",
+				"Set Syntax: C"
+			],
+			[
+				"Syn c",
+				"Set Syntax: C"
+			],
+			[
+				"f",
+				"Folders List"
+			],
+			[
+				"folde",
+				"Folders List"
+			],
+			[
+				"fol",
+				"Folders List"
+			],
+			[
+				"disa",
+				"SublimeCodeIntel: Disable Plugin"
+			],
+			[
+				"enab",
+				"Package Control: Enable Package"
+			],
+			[
+				"lore",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"syntax c",
+				"Set Syntax: C"
+			],
+			[
+				"sor",
+				"Sort Lines"
+			]
+		],
+		"width": 453.0
+	},
+	"console":
+	{
+		"height": 141.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": false,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": true,
+		"side_bar_visible": true,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/nicolas/Work/trackmint2/app/controllers/priorities_controller.rb",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/app.js",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/views/tickets/ticket_item.js",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/routers/router.js",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/views/ticket_states/ticket_states_index.js",
+		"/home/nicolas/Work/trackmint2/app/views/layouts/application.html.erb",
+		"/home/nicolas/Work/trackmint2/config/routes.rb",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/views/ticket_states/ticket_state.js",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/models/ticket_state.js",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/models/ticket.js",
+		"/home/nicolas/Work/trackmint2/app/helpers/application_helper.rb",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/collections/priorities.js",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/classes/associative_model.js",
+		"/home/nicolas/Work/trackmint2/Guardfile",
+		"/home/nicolas/Work/trackmint2/app/models/priority.rb",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/views/tickets/ticket.js",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/views/activities/activity.js",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/views/activities/activities_index.js",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/views/filters/filters_index.js",
+		"/home/nicolas/Work/trackmint2/app/assets/templates/filters/index.jst.ejs",
+		"/home/nicolas/Work/trackmint2/app/assets/templates/activities/index.jst.ejs",
+		"/home/nicolas/Work/trackmint2/app/assets/templates/activities/activity.jst.ejs",
+		"/home/nicolas/Work/trackmint2/app/assets/templates/comments/index.jst.ejs",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/views/comments/comments_index.js",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/classes/view/base.js",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/classes/view/with_form.js",
+		"/home/nicolas/Work/trackmint2/app/assets/templates/comments/comment.jst.ejs",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/views/comments/comment.js",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/collections/comments.js",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/routers/tickets_router.js",
+		"/home/nicolas/Work/trackmint2/app/views/activities/index.html.erb",
+		"/home/nicolas/Work/trackmint2/app/assets/stylesheets/application.css.scss",
+		"/home/nicolas/Dropbox/Redmint/charla_backbone/Backbone.js Todos_files/todos.js",
+		"/home/nicolas/Work/trackmint2/app/controllers/activities_controller.rb",
+		"/home/nicolas/Work/trackmint2/app/controllers/tasks_controller.rb",
+		"/home/nicolas/Work/trackmint2/app/controllers/tickets_controller.rb",
+		"/home/nicolas/Work/trackmint2/app/controllers/ticket_states_controller.rb",
+		"/home/nicolas/Work/trackmint2/app/assets/templates/ticket_states/ticket_state.jst.ejs",
+		"/home/nicolas/Work/trackmint2/app/views/ticket_states/index.html.erb",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/collections/activities.js",
+		"/home/nicolas/Work/trackmint2/app/models/activity.rb",
+		"/home/nicolas/Work/trackmint2/spec/javascripts/classes/associative_model.spec.js",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/classes/collection_ui.js",
+		"/home/nicolas/Work/trackmint2/lib/console.rb",
+		"/home/nicolas/Work/trackmint2/app/models/ticket.rb",
+		"/home/nicolas/.config/sublime-text-2/Packages/User/Soda Dark.sublime-theme",
+		"/home/nicolas/Desktop/programming.TODO",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/classes/best_in_place_view.js",
+		"/home/nicolas/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/nicolas/Work/trackmint2/spec/javascripts/helpers/spec_helper.js",
+		"/home/nicolas/Work/trackmint2/spec/spec_helper.rb",
+		"/home/nicolas/Work/trackmint2/spec/javascripts/classes/best_in_place_view.spec.js",
+		"/home/nicolas/Work/trackmint2/app/assets/templates/tickets/ticket.jst.ejs",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/models/priority.js",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/views/base/extends.js",
+		"/home/nicolas/Work/trackmint2/app/views/projects/_form.html.erb",
+		"/home/nicolas/Work/trackmint2/db/seeds.rb",
+		"/home/nicolas/Work/trackmint2/app/models/projects_users.rb",
+		"/home/nicolas/Work/trackmint2/app/models/user.rb",
+		"/home/nicolas/Work/trackmint2/app/controllers/projects_controller.rb",
+		"/home/nicolas/Work/trackmint2/app/models/project.rb",
+		"/home/nicolas/Work/trackmint2/Gemfile",
+		"/home/nicolas/Work/trackmint2/db/migrate/20130711165602_devise_create_users.rb",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/classes/position_handler.js",
+		"/home/nicolas/Work/trackmint2/config/environment.rb",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/application.js",
+		"/home/nicolas/Work/trackmint2/spec/javascripts/support/jasmine.yml",
+		"/home/nicolas/Work/trackmint2/order_example.rb",
+		"/home/nicolas/Work/trackmint2/db/migrate/20130728042643_create_projects_users.rb",
+		"/home/nicolas/Work/trackmint2/spec/models/projects_users_spec.rb",
+		"/home/nicolas/Work/trackmint2/db/migrate/20130728042352_add_projects_users.rb",
+		"/home/nicolas/Work/trackmint2/db/migrate/20130703175450_create_tickets.rb",
+		"/home/nicolas/Work/trackmint2/app/models/ticket_state.rb",
+		"/home/nicolas/Work/trackmint2/spec/controllers/users_controller_spec.rb",
+		"/home/nicolas/Work/trackmint2/app/classes/searchable.rb",
+		"/home/nicolas/Work/trackmint2/spec/classes/searchable_spec.rb",
+		"/home/nicolas/Work/trackmint2/spec/models/comment_spec.rb",
+		"/home/nicolas/Work/trackmint2/spec/models/ticket_spec.rb",
+		"/home/nicolas/Work/trackmint2/spec/models/ticket_state_spec.rb",
+		"/home/nicolas/Work/trackmint2/spec/models/user_spec.rb",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/views/tickets/tickets_index.js",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/collections/tickets.js",
+		"/home/nicolas/Work/trackmint2/app/views/ticket_states/show.html.erb",
+		"/home/nicolas/Work/trackmint2/spec/controllers/comments_controller_spec.rb",
+		"/home/nicolas/Work/trackmint2/config/environments/test.rb",
+		"/home/nicolas/Desktop/tastejs-todomvc-d41638c/architecture-examples/backbone/js/views/todos.js",
+		"/home/nicolas/Desktop/tastejs-todomvc-d41638c/architecture-examples/backbone/js/app.js",
+		"/home/nicolas/Desktop/tastejs-todomvc-d41638c/architecture-examples/backbone/js/views/app.js",
+		"/home/nicolas/Desktop/tastejs-todomvc-d41638c/architecture-examples/backbone/js/lib/backbone.js",
+		"/home/nicolas/Work/trackmint2/spec/javascripts/jasmine_examples/player_spec.js",
+		"/home/nicolas/Desktop/325-backbone-on-rails-part-2/raffler-after/doc/README_FOR_APP",
+		"/home/nicolas/Work/trackmint2/db/migrate/20130718035902_add_order_to_ticket.rb",
+		"/home/nicolas/Work/trackmint2/trackmint2.TODO",
+		"/home/nicolas/Work/trackmint2/app/controllers/application_controller.rb",
+		"/home/nicolas/Work/trackmint2/app/assets/templates/tickets/index.jst.ejs",
+		"/home/nicolas/Desktop/325-backbone-on-rails-part-2/raffler-after/app/assets/javascripts/views/entries/entries_index.js.coffee",
+		"/home/nicolas/Work/trackmint2/app/assets/stylesheets/ticket_states.css.scss",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/views/base/app.js",
+		"/home/nicolas/Work/trackmint2/app/assets/templates/tickets/ticket_item.jst.ejs",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/trackmint2.js",
+		"/home/nicolas/Work/trackmint2/app/assets/stylesheets/scaffolds.css.scss",
+		"/home/nicolas/Work/trackmint2/app/assets/stylesheets/tickets.css.scss",
+		"/home/nicolas/Work/trackmint2/app/assets/templates/ticket_states/index.jst.ejs",
+		"/home/nicolas/Dropbox/Redmint/trackmint2.TODO",
+		"/home/nicolas/Work/trackmint2/app/views/tickets/index.html.erb",
+		"/home/nicolas/Work/trackmint2/app/controllers/comments_controller.rb",
+		"/home/nicolas/Work/trackmint2/app/models/comment.rb",
+		"/home/nicolas/Work/trackmint2/app/views/tickets/show.html.erb",
+		"/home/nicolas/Desktop/tastejs-todomvc-d41638c/architecture-examples/backbone/js/routers/router.js",
+		"/home/nicolas/Desktop/325-backbone-on-rails-part-2/raffler-after/app/assets/templates/entries/entry.jst.eco",
+		"/home/nicolas/Desktop/325-backbone-on-rails-part-2/raffler-after/app/assets/templates/entries/index.jst.eco",
+		"/home/nicolas/Desktop/325-backbone-on-rails-part-2/raffler-after/app/controllers/entries_controller.rb",
+		"/home/nicolas/Desktop/test.rb",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/ticket_states.js",
+		"/home/nicolas/Work/trackmint2/app/assets/javascripts/backbone/trackmint2.js",
+		"/home/nicolas/Dropbox/Redmint/TODO redmint.TODO",
+		"/home/nicolas/Dropbox/Redmint/query_que_no_funca.rb",
+		"/home/nicolas/Dropbox/Redmint/quesition_DB.rb",
+		"/home/nicolas/Dropbox/Redmint/testing_queries/app/models/user.rb",
+		"/home/nicolas/Dropbox/Redmint/testing_queries/Gemfile",
+		"/home/nicolas/Desktop/trackmint2/Gemfile",
+		"/home/nicolas/Dropbox/Redmint/testing_queries/db/migrate/20130708030113_create_pictures.rb",
+		"/home/nicolas/Dropbox/Redmint/testing_queries/db/migrate/20130708030124_create_user_configurations.rb",
+		"/home/nicolas/Work/shopzy/db/migrate/20130313133647_create_pictures.rb",
+		"/home/nicolas/Desktop/todo",
+		"/home/nicolas/Work/shopzy/app/queries/picture_home_query.rb",
+		"/home/nicolas/Work/shopzy/app/models/user_configuration.rb",
+		"/home/nicolas/Work/shopzy/app/models/following_relation.rb"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"",
+			"*.js",
+			"*.rb",
+			"*.js",
+			"",
+			"C:\\Users\\Nicolas\\Desktop\\S\\Dropbox\\Projects\\Ruby\\sublime_bundler",
+			"",
+			"C:\\Users\\Nicolas\\Desktop\\S\\Dropbox\\Projects\\Ruby\\sublime_bundler",
+			"",
+			"*.rb",
+			"*.erb",
+			"*.rb",
+			"app/*.rb",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"generateShowUrl",
+			"jlattributes",
+			"models",
+			"router",
+			"\"",
+			"filter",
+			"n()",
+			"Backbone.Marionette.ItemView.extend",
+			"CommentsIndex",
+			"renderSideBar",
+			"start",
+			"addOne",
+			"ty.",
+			"			<% if(activity.get(\"info\")) { %>\n				<%= (\"\\\"\" + activity.get(\"info\") + \"\\\"\") %> \n			<% } %>\n",
+			"activitiesView",
+			".to_json(",
+			"include",
+			"respond_to",
+			"this",
+			"this.",
+			"ticketStateView",
+			"\n	",
+			"\"ticketState\"",
+			"]) {",
+			"changed?",
+			"changed",
+			"debugger",
+			"andCallThrough",
+			"key",
+			"name",
+			"_.partial",
+			"html # ",
+			"# G",
+			"projects_users",
+			"ProjectsUser",
+			"project",
+			"make",
+			"\"",
+			"ENTER_KEY",
+			"destroy",
+			"_spec",
+			"config.assets.debug",
+			"[0].reset();",
+			"newComment",
+			"newTicket",
+			"Listing tickets",
+			"listing tickets",
+			"placeHolder",
+			"placeholderSelector",
+			"TicketIndex",
+			"ticketsStates",
+			"s",
+			"ticketStates",
+			"display:",
+			"i",
+			"path",
+			"attributes",
+			"new_entry",
+			"skipRender",
+			"Collections",
+			"render_",
+			"(",
+			"commentsView",
+			".on(",
+			"initialize",
+			"this.",
+			"td",
+			"tr",
+			"th",
+			"tbody",
+			"\"",
+			"+",
+			"INNER",
+			"public_pictures",
+			"UserConfiguration",
+			"User",
+			"BlockedRelation",
+			"user",
+			"visible",
+			"Television",
+			"Jims",
+			"follo",
+			"public",
+			"currentpub",
+			"public",
+			"user_configuration",
+			"user_configurationss",
+			"user_configuration",
+			"user_has_gender",
+			"'",
+			"includes(:tags)",
+			"where",
+			"visible",
+			"block",
+			".comments",
+			"scope",
+			"render_comment",
+			" ",
+			"through",
+			"seen",
+			"blocked_users",
+			"follow",
+			",\n",
+			"on: :collection",
+			"unfollow",
+			"follow",
+			".visible",
+			"Picture.visible",
+			"y)",
+			".visible",
+			"by_country",
+			"loggued_user",
+			"current_user",
+			"by_country",
+			"current_user",
+			"current_",
+			"is_following",
+			"cap",
+			"recapcha",
+			"push",
+			"following",
+			"follow",
+			"follower",
+			"triple_score",
+			"riple_score",
+			"roll_score",
+			"@roll",
+			"tripled_dice"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"newCommentForm",
+			"testArray",
+			"generatedOutput",
+			"generate",
+			"HTMLCreator",
+			"",
+			"openFileList",
+			"globalCacheTable[i]",
+			"engine",
+			"val()",
+			"animationObj",
+			"animate",
+			"doAnimation({})",
+			"propertiesToAnimate",
+			"BASESPEED"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 38.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 132.0
+	},
+	"output.git":
+	{
+		"height": 114.0
+	},
+	"output.guard":
+	{
+		"height": 114.0
+	},
+	"output.jsconsole_view":
+	{
+		"height": 0.0
+	},
+	"output.jshint_view":
+	{
+		"height": 0.0
+	},
+	"output.jslint_result_view":
+	{
+		"height": 132.0
+	},
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"app.e",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"ticketitem",
+				"app/assets/javascripts/views/tickets/ticket_item.js"
+			],
+			[
+				"app",
+				"app/assets/javascripts/app.js"
+			],
+			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
+				"pic",
+				"app/controllers/priorities_controller.rb"
+			],
+			[
+				"pri",
+				"app/assets/javascripts/collections/priorities.js"
+			],
+			[
+				"asso",
+				"app/assets/javascripts/classes/associative_model.js"
+			],
+			[
+				"ticket.js",
+				"app/assets/javascripts/models/ticket.js"
+			],
+			[
+				"ticketstate.js",
+				"app/assets/javascripts/models/ticket_state.js"
+			],
+			[
+				"guard",
+				"Guardfile"
+			],
+			[
+				"prio",
+				"app/models/priority.rb"
+			],
+			[
+				"apphelp",
+				"app/helpers/application_helper.rb"
+			],
+			[
+				"apphe",
+				"app/helpers/application_helper.rb"
+			],
+			[
+				"prico",
+				"app/controllers/priorities_controller.rb"
+			],
+			[
+				"viewticke",
+				"app/assets/javascripts/views/tickets/ticket.js"
+			],
+			[
+				"appe",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"priori",
+				"app/assets/javascripts/collections/priorities.js"
+			],
+			[
+				"viewsstate",
+				"app/assets/javascripts/views/ticket_states/ticket_state.js"
+			],
+			[
+				"view/ticketsta",
+				"app/assets/javascripts/views/ticket_states/ticket_states_index.js"
+			],
+			[
+				"router",
+				"config/routes.rb"
+			],
+			[
+				"ap",
+				"app/assets/javascripts/app.js"
+			],
+			[
+				"ap.er",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"templates/",
+				"app/assets/templates/filters/index.jst.ejs"
+			],
+			[
+				"app.js",
+				"app/assets/javascripts/app.js"
+			],
+			[
+				"commit",
+				"app/assets/templates/comments/index.jst.ejs"
+			],
+			[
+				"base",
+				"app/assets/javascripts/classes/view/base.js"
+			],
+			[
+				"wi",
+				"app/assets/javascripts/classes/view/with_form.js"
+			],
+			[
+				"commeninde",
+				"app/assets/javascripts/views/comments/comments_index.js"
+			],
+			[
+				"colle/come",
+				"app/assets/javascripts/collections/comments.js"
+			],
+			[
+				"route",
+				"app/assets/javascripts/routers/tickets_router.js"
+			],
+			[
+				"comments.js",
+				"app/assets/javascripts/collections/comments.js"
+			],
+			[
+				"index.ejs",
+				"app/assets/templates/comments/index.jst.ejs"
+			],
+			[
+				"commen.es",
+				"app/assets/templates/comments/comment.jst.ejs"
+			],
+			[
+				"view/ac",
+				"app/assets/javascripts/views/activities/activity.js"
+			],
+			[
+				"view/comme",
+				"app/assets/javascripts/views/comments/comments_index.js"
+			],
+			[
+				"comments",
+				"app/assets/javascripts/collections/comments.js"
+			],
+			[
+				"comment.js",
+				"app/assets/javascripts/views/comments/comment.js"
+			],
+			[
+				"app.css",
+				"app/assets/stylesheets/application.css.scss"
+			],
+			[
+				"ap.e",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"prioc",
+				"app/controllers/priorities_controller.rb"
+			],
+			[
+				"tickesc",
+				"app/controllers/ticket_states_controller.rb"
+			],
+			[
+				"ticke",
+				"app/controllers/tickets_controller.rb"
+			],
+			[
+				"accon",
+				"app/controllers/activities_controller.rb"
+			],
+			[
+				"app.er",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"index.ej",
+				"app/assets/templates/activities/index.jst.ejs"
+			],
+			[
+				"index",
+				"app/views/activities/index.html.erb"
+			],
+			[
+				"activievi",
+				"app/assets/javascripts/views/activities/activities_index.js"
+			],
+			[
+				"coll/",
+				"app/assets/javascripts/collections/comments.js"
+			],
+			[
+				"collac",
+				"app/assets/javascripts/collections/activities.js"
+			],
+			[
+				"views/.js",
+				"app/assets/javascripts/views/activities/activities_index.js"
+			],
+			[
+				"app.j",
+				"app/assets/javascripts/app.js"
+			],
+			[
+				"tickcon",
+				"app/controllers/tickets_controller.rb"
+			],
+			[
+				"activicn",
+				"app/controllers/activities_controller.rb"
+			],
+			[
+				"act.r",
+				"app/models/activity.rb"
+			],
+			[
+				"ticketstate.ej",
+				"app/assets/templates/ticket_states/ticket_state.jst.ejs"
+			],
+			[
+				"coll",
+				"app/assets/javascripts/classes/collection_ui.js"
+			],
+			[
+				"task",
+				"app/controllers/tasks_controller.rb"
+			],
+			[
+				"ticket",
+				"app/models/ticket.rb"
+			],
+			[
+				"console",
+				"lib/console.rb"
+			],
+			[
+				"tickecon",
+				"app/controllers/tickets_controller.rb"
+			],
+			[
+				"bes",
+				"spec/javascripts/classes/best_in_place_view.spec.js"
+			],
+			[
+				"spe",
+				"spec/javascripts/helpers/spec_helper.js"
+			],
+			[
+				"spec",
+				"spec/spec_helper.rb"
+			],
+			[
+				"best",
+				"app/assets/javascripts/classes/best_in_place_view.js"
+			],
+			[
+				"assp",
+				"spec/javascripts/classes/associative_model.spec.js"
+			],
+			[
+				"exten",
+				"app/assets/javascripts/views/base/extends.js"
+			],
+			[
+				"priorities",
+				"app/assets/javascripts/collections/priorities.js"
+			],
+			[
+				"prio.js",
+				"app/assets/javascripts/models/priority.js"
+			],
+			[
+				"ap.css",
+				"app/assets/stylesheets/application.css.scss"
+			],
+			[
+				"view/ticket",
+				"app/assets/javascripts/views/tickets/ticket.js"
+			],
+			[
+				"ticket.ejs",
+				"app/assets/templates/tickets/ticket.jst.ejs"
+			],
+			[
+				"seed",
+				"db/seeds.rb"
+			],
+			[
+				"projeuse",
+				"app/models/projects_users.rb"
+			],
+			[
+				"user",
+				"app/models/user.rb"
+			],
+			[
+				"projecon",
+				"app/controllers/projects_controller.rb"
+			],
+			[
+				"proje",
+				"app/models/project.rb"
+			],
+			[
+				"form",
+				"app/views/projects/_form.html.erb"
+			],
+			[
+				"jasmi",
+				"spec/javascripts/support/jasmine.yml"
+			],
+			[
+				"appli.js",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"positio",
+				"app/assets/javascripts/classes/position_handler.js"
+			],
+			[
+				"creatuser",
+				"db/migrate/20130711165602_devise_create_users.rb"
+			],
+			[
+				"creaproj",
+				"db/migrate/20130728042643_create_projects_users.rb"
+			],
+			[
+				"pro",
+				"app/models/projects_users.rb"
+			],
+			[
+				"projec",
+				"app/models/projects_users.rb"
+			],
+			[
+				"or",
+				"order_example.rb"
+			],
+			[
+				"rojec",
+				"app/models/projects_users.rb"
+			],
+			[
+				"proj",
+				"app/models/project.rb"
+			],
+			[
+				"createprojesu",
+				"db/migrate/20130728042643_create_projects_users.rb"
+			],
+			[
+				"projects",
+				"spec/models/projects_users_spec.rb"
+			],
+			[
+				"creatic",
+				"db/migrate/20130703175450_create_tickets.rb"
+			],
+			[
+				"projectu",
+				"db/migrate/20130728042352_add_projects_users.rb"
+			],
+			[
+				"create",
+				"db/migrate/20130703175450_create_tickets.rb"
+			],
+			[
+				"tickesta",
+				"app/models/ticket_state.rb"
+			],
+			[
+				"createticket",
+				"db/migrate/20130703175450_create_tickets.rb"
+			],
+			[
+				"",
+				"app/models/ticket.rb"
+			],
+			[
+				"see",
+				"db/seeds.rb"
+			],
+			[
+				"order",
+				"order_example.rb"
+			],
+			[
+				"gemf",
+				"Gemfile"
+			],
+			[
+				"guar",
+				"Guardfile"
+			],
+			[
+				"ticketscon",
+				"app/controllers/tickets_controller.rb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"sear",
+				"app/classes/searchable.rb"
+			],
+			[
+				"commencon",
+				"trackmint2/spec/controllers/comments_controller_spec.rb"
+			],
+			[
+				"spec/con",
+				"trackmint2/spec/controllers/users_controller_spec.rb"
+			],
+			[
+				"spec/tick",
+				"trackmint2/spec/models/ticket_spec.rb"
+			],
+			[
+				"ticketstaes/show",
+				"trackmint2/app/views/ticket_states/show.html.erb"
+			],
+			[
+				"posit",
+				"trackmint2/app/assets/javascripts/classes/position_handler.js"
+			],
+			[
+				"rout",
+				"trackmint2/config/routes.rb"
+			],
+			[
+				"viewticket",
+				"trackmint2/app/assets/javascripts/views/tickets/ticket.js"
+			],
+			[
+				"ticketindex",
+				"trackmint2/app/assets/javascripts/views/tickets/tickets_index.js"
+			],
+			[
+				"vietickesta",
+				"trackmint2/app/assets/javascripts/views/ticket_states/ticket_state.js"
+			],
+			[
+				"ticketstatin",
+				"trackmint2/app/assets/javascripts/views/ticket_states/ticket_states_index.js"
+			],
+			[
+				"test",
+				"trackmint2/config/environments/test.rb"
+			],
+			[
+				"gemfi",
+				"trackmint2/Gemfile"
+			],
+			[
+				"addor",
+				"trackmint2/db/migrate/20130718035902_add_order_to_ticket.rb"
+			],
+			[
+				"todo",
+				"trackmint2/trackmint2.TODO"
+			],
+			[
+				"appliccon",
+				"trackmint2/app/controllers/application_controller.rb"
+			],
+			[
+				"/views/ticket_states/ticket_state",
+				"trackmint2/app/assets/javascripts/views/ticket_states/ticket_state.js"
+			],
+			[
+				"extend",
+				"trackmint2/app/assets/javascripts/views/base/extends.js"
+			],
+			[
+				"viewstate",
+				"trackmint2/app/assets/javascripts/views/ticket_states/ticket_state.js"
+			],
+			[
+				"state_index",
+				"trackmint2/app/assets/javascripts/views/ticket_states/ticket_states_index.js"
+			],
+			[
+				"collection/ticket",
+				"trackmint2/app/assets/javascripts/collections/tickets.js"
+			],
+			[
+				"view/tickeitem",
+				"trackmint2/app/assets/javascripts/views/tickets/ticket_item.js"
+			],
+			[
+				"view/ticke",
+				"trackmint2/app/assets/javascripts/views/tickets/ticket.js"
+			],
+			[
+				"tickesta.css",
+				"trackmint2/app/assets/stylesheets/ticket_states.css.scss"
+			],
+			[
+				"base/",
+				"trackmint2/app/assets/javascripts/views/base/app.js"
+			],
+			[
+				"temstate",
+				"trackmint2/app/assets/templates/ticket_states/ticket_state.jst.ejs"
+			],
+			[
+				"collticket",
+				"trackmint2/app/assets/javascripts/collections/tickets.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"wum",
+				"/home/nicolas/Work/wumbla/wumbla.sublime-project"
+			],
+			[
+				"li",
+				"/home/nicolas/Dropbox/Redmint/realtime/with_socketio/realtime_with_socketIO.sublime-project"
+			],
+			[
+				"soc",
+				"/home/nicolas/Dropbox/Redmint/realtime/with_socketio/realtime_with_socketIO.sublime-project"
+			],
+			[
+				"so",
+				"/home/nicolas/Dropbox/Redmint/realtime/with_socketio/realtime_with_socketIO.sublime-project"
+			],
+			[
+				"",
+				"/home/nicolas/Dropbox/Redmint/realtime/with_socketio/realtime_with_socketIO.sublime-project"
+			],
+			[
+				"wu",
+				"/home/nicolas/Work/wumbla/wumbla.sublime-project"
+			],
+			[
+				"w",
+				"/home/nicolas/Work/wumbla/wumbla.sublime-project"
+			],
+			[
+				"tr",
+				"/home/nicolas/Work/trackmint2/trackmint2.sublime-project"
+			],
+			[
+				"ba",
+				"/home/nicolas/Work/trackmint2/trackmint2_Backbone.sublime-project"
+			],
+			[
+				"t",
+				"/home/nicolas/Work/trackmint2/trackmint2_Backbone.sublime-project"
+			],
+			[
+				"bak",
+				"/home/nicolas/Work/trackmint2/trackmint2_Backbone.sublime-project"
+			],
+			[
+				"ni",
+				"/C/Users/Nicolas/Desktop/S/Dropbox/Redmint/nightclubber/nightclubber.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 190.0,
+	"status_bar_visible": true
+}
