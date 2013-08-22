@@ -57,7 +57,7 @@ beforeEach(function() {
     };
 
     this.createSocketMock = function() {
-        var socketMock = jasmine.createSpyObj("socketMock", ["on", "emit", "removeListener", "removeAllListeners"]);
+        var socketMock = jasmine.createSpyObj("socketMock", ["on", "emit", "removeListener"]);
 
         // Fallback to jquerys event handling
         socketMock.on.andCallFake(function(eventName, fn) {
@@ -69,9 +69,6 @@ beforeEach(function() {
         
         socketMock.removeListener.andCallFake(function(eventName) {
             jQuery(socketMock).off(eventName);
-        });
-        socketMock.removeAllListeners.andCallFake(function() {
-            jQuery(socketMock).off();
         });
 
         return socketMock;

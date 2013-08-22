@@ -132,7 +132,9 @@
             this.socket.removeListener(eventName, this.eventHandlers[eventName]);
         },
         removeAllEvents: function() {
-            this.socket.removeAllListeners();
+            for(var event in this.eventHandlers) {
+                this.removeEvent(event);
+            }
         }
     };
 
