@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Testing jquery-livesortable</title>
+    
+        <link rel="stylesheet" href="stylesheets/styles.css">
+    </head>
+    <body>
+        <div class="content">
+            <div class="nameContainer">
+                <label for="username">Type your username: </label>
+                <input name="username" type="text" id="username">
+            </div>
+            <div class="options">
+                <input name="sendInRealtime" type="checkbox" id="sendInRealtime" checked="checked" disabled="disabled">
+                <label for="sendInRealtime">Send data in realtime</label>
+                <br />
+                <input name="activateRealtime" type="checkbox" id="activateRealtime">
+                <label for="activateRealtime">Enable realtime</label>
+            </div>
+            <div class="sortable">
+                <ul id="teamsList" class="list">
+                    <li id="1">Barcelona</li>
+                    <li id="2">Real Madrid</li>
+                    <li id="3">Manchester United</li>
+                    <li id="4">Arsenal</li>
+                    <li id="5">Milan</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="//code.jquery.com/jquery-latest.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+    
+        <script src="javascripts/jquery.livesortable.js"></script>
+        <script src="javascripts/comunication.js"></script>
+    </body>
+</html>
