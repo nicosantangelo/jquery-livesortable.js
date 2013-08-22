@@ -3,6 +3,8 @@ jquery-livesortable.js
 
 _livesortable_ helps you to build a realtime sortable list providing a defined comunication between the server and the client, support for turning on and off the information exchange, and a few more options to play with.
 
+![](https://raw.github.com/NicoSantangelo/jquery-livesortable.js/master/demo.gif)
+
 Usage
 -----
 
