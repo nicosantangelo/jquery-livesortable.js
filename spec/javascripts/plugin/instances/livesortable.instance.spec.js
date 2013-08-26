@@ -18,7 +18,7 @@ describe("The stored LiveSortable instance", function() {
     it("should delete the plugin when remove is called", function() {
         this.liveSortable.remove();
 
-        expect(this.getPluginInstance(this.$list)).not.toBeDefined();  
+        expect(this.getPluginInstance()).not.toBeDefined();  
         expect(this.$list).not.toHandle("mousemove.liveSortable");
     });
 

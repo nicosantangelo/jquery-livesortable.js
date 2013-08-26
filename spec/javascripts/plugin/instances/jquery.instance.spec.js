@@ -5,26 +5,29 @@ describe("The jquery instance", function() {
 
     it("should call sortable on the matched elements", function() {
         expect(this.$list.sortable).toHaveBeenCalled();
+        expect(jQuery.fn.sortable).toHaveBeenCalled();
     });
 
     it("should pass sortable object to jquery ui", function() {
-        this.$list.liveSortable({
+        this.$list.liveSortable("remove").liveSortable({
             socket: this.socketMock,
             sortable: {
                 helper: ".test",
                 start: "overriden"
             }
         });
-
-        var sortableOptions = this.$list.sortable.mostRecentCall.args[0];
+        var sortableOptions = jQuery.fn.sortable.mostRecentCall.args[0];
 
         expect(sortableOptions["start"]).toEqual("overriden");
         expect(sortableOptions["helper"]).toEqual(".test");
     });
 
     it("should throw if no socket is passed", function() {
-        var $list = this.$list;
-        expect(function() { $list.liveSortable({ sortable: {} }); }).toThrow(new Error("A socket must be passed as an argument to use liveSortable."));
+        var $list = this.$list.liveSortable("remove");
+        expect(function() {
+            $list.liveSortable({ sortable: {} });
+        })
+        .toThrow( new Error("A socket must be passed as an argument to use liveSortable.") );
     });
 
     it("should handle a mousemove event", function() {
@@ -61,6 +64,5 @@ describe("The jquery instance", function() {
         this.simulateMousemove();
         expect( this.getLastArguments(this.pluginOptions.events.mousemove).length ).toEqual(2);
     });
-
 
 });

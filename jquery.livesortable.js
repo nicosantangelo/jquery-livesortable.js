@@ -142,8 +142,8 @@
         LiveSortable Class
        ============================================== */
 
-    function LiveSortable( jqueryInstance, options ) {
-        this.$element = jqueryInstance;
+    function LiveSortable( element, options ) {
+        this.$element = $(element);
 
         // Plugin defaults
         this.options = $.extend({}, defaults, options);
@@ -250,12 +250,10 @@
         }
 
         return this.each(function() {
-            var $this = $(this);
-
             // When the first argument is a string, call a method on the instance with that string as the method name
             // Otherwise instantiate the plugin
             if (isMethod) {
-                var instance = $this.data(pluginDataName);
+                var instance = $.data(this, pluginDataName);
                 if (!instance) {
                     throw "Method called on liveSortable before instantiation";
                 }
@@ -269,7 +267,10 @@
                     return returnValue;
                 }
             } else {
-                $this.data(pluginDataName, new LiveSortable($this, options));
+                // Create only one instance
+                if ( !$.data(this, pluginDataName) ) {
+                    $.data(this, pluginDataName, new LiveSortable( this, options ));
+                }
             }
         });
     };

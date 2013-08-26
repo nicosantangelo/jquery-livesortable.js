@@ -31,8 +31,8 @@ beforeEach(function() {
         this.$list = this.customLoadFixtures();
         this.$firstLi = this.$list.children("li:first");
 
-        this.socketMock = this.startPluginWithSocketMock(this.$list);
-        this.liveSortable = this.getPluginInstance(this.$list);
+        this.socketMock = this.startPluginWithSocketMock();
+        this.liveSortable = this.getPluginInstance();
     };
 
     this.customLoadFixtures = function(fixtures, selector) {
@@ -51,7 +51,7 @@ beforeEach(function() {
     	spyOn(jQuery.fn, "sortable").andCallThrough();
 
         // ...start the plugin
-        $element.liveSortable(this.pluginOptions);
+        ($element || this.$list).liveSortable(this.pluginOptions);
 
     	return this.pluginOptions.socket;
     };
@@ -81,7 +81,7 @@ beforeEach(function() {
     };
 
     this.getPluginInstance = function($element) {
-    	return $element.data("plugin_liveSortable");
+    	return ($element || this.$list).data("plugin_liveSortable");
     };
 
     this.resetPlugin = function(addedOptions) {
