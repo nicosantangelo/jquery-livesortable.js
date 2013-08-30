@@ -5,7 +5,7 @@
     if ($ === undefined) {
         throw "jQuery should be defined to use liveSortable";
     }
-    if (!"sortable" in $.fn) {
+    if (!("sortable" in $.fn)) {
         throw "jQuery UIs sortable should be defined to use liveSortable";
     }
 
@@ -91,7 +91,7 @@
             }
             return $.map(eventNames, this.addSufix);
         }
-    }
+    };
 
     /* ==============================================
         SocketEventer Class
@@ -115,7 +115,7 @@
         });
 
         return this;
-    };
+    }
     SocketEventer.prototype = {
         eventHandlers: {},
         addEvent: function(eventName) {
@@ -133,7 +133,9 @@
         },
         removeAllEvents: function() {
             for(var event in this.eventHandlers) {
-                this.removeEvent(event);
+                if(this.eventHandlers.hasOwnProperty(event)) {
+                    this.removeEvent(event);
+                }
             }
         }
     };
@@ -164,7 +166,7 @@
         this._socketEventer = new SocketEventer(this);
         this.getSocket = function() {
             return this._socketEventer.socket;
-        }
+        };
 
         // Mousemove event
         if(!this.options.cancelSedingInRealtime) {
@@ -172,7 +174,7 @@
         }
 
         return this;
-    };
+    }
 
     LiveSortable.prototype = {
         isBeingDragged: false,
