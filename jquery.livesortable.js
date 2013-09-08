@@ -83,9 +83,9 @@
             return eventName + eventNamesFactory.sufix;
         },
         create: function(liveSortable) {
-            var eventNames = ["move_element", "move_started", "move_ended"];
+            var eventNames = ["moving_element", "move_started", "move_ended"];
 
-            // If realtime is canceled, delete the move_element event
+            // If realtime is canceled, delete the moving_element event
             if(liveSortable.options.cancelRealtime) {
                 eventNames = eventNames.slice(1);
             }
@@ -217,7 +217,7 @@
             return this.options[option];
         },
         toggleRealtime: function() {
-            var realtimeEventName = eventNamesFactory.addSufix("move_element");
+            var realtimeEventName = eventNamesFactory.addSufix("moving_element");
 
             if( this.toggleOption("cancelRealtime") ) {
                 this._socketEventer.removeEvent(realtimeEventName);

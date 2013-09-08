@@ -31,7 +31,7 @@ describe("The stored LiveSortable instance", function() {
     });
 
     it("should toggle the cancelRealtime option on toggleRealtime", function() {
-        var spyMoveElementEvent = spyOnEvent(this.$list, "move_element.liveSortable");
+        var spyMoveElementEvent = spyOnEvent(this.$list, "moving_element.liveSortable");
 
         // By default the event is handled by the object, the first toggle disables it...
         this.toggleRealtime();

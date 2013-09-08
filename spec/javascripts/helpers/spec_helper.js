@@ -19,7 +19,7 @@ beforeEach(function() {
         }
     };
 
-    this.customEvents = ["move_started.liveSortable", "move_element.liveSortable", "move_ended.liveSortable"];
+    this.customEvents = ["move_started.liveSortable", "moving_element.liveSortable", "move_ended.liveSortable"];
     this.forEachCustomEvent = function(fn) {
         var self = this;
         jQuery.each(this.customEvents, function(index, customEvent) {
@@ -97,7 +97,7 @@ beforeEach(function() {
 
     this.toggleRealtime = function() {
         this.$list.liveSortable("toggleRealtime");
-        this.socketMock.emit("move_element.liveSortable");
+        this.socketMock.emit("moving_element.liveSortable");
     };
 
     this.toggleRealtimeSending = function() {

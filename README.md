@@ -52,7 +52,7 @@ All events live inside the `.liveSortable` namespace, and are fired with the use
 
 * `move_started.liveSortable` -  Triggered when the user starts dragging an element.
 
-* `move_element.liveSortable` - Triggered on mousemove.
+* `moving_element.liveSortable` - Triggered on mousemove.
 
 * `move_ended.liveSortable` - Triggered when the user stops dragging an element
 

@@ -30,7 +30,7 @@
         elem.appendChild(movedBySpan);
     });
 
-    $teamsList.on("move_element.liveSortable", function(event, data) {
+    $teamsList.on("moving_element.liveSortable", function(event, data) {
         var elem = document.getElementById(data.id);
 
         elem.style.position = 'absolute';

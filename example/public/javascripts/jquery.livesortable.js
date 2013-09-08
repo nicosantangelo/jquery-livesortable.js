@@ -1,11 +1,11 @@
-;(function (window, document, undefined) {
+;(function ($, undefined) {
     "use strict";
 
     // Dependencies
-    if (jQuery === undefined) {
+    if ($ === undefined) {
         throw "jQuery should be defined to use liveSortable";
     }
-    if (jQuery().sortable === undefined) {
+    if (!("sortable" in $.fn)) {
         throw "jQuery UIs sortable should be defined to use liveSortable";
     }
 
@@ -83,15 +83,15 @@
             return eventName + eventNamesFactory.sufix;
         },
         create: function(liveSortable) {
-            var eventNames = ["move_element", "move_started", "move_ended"];
+            var eventNames = ["moving_element", "move_started", "move_ended"];
 
-            // If realtime is canceled, delete the move_element event
+            // If realtime is canceled, delete the moving_element event
             if(liveSortable.options.cancelRealtime) {
                 eventNames = eventNames.slice(1);
             }
-            return jQuery.map(eventNames, this.addSufix);
+            return $.map(eventNames, this.addSufix);
         }
-    }
+    };
 
     /* ==============================================
         SocketEventer Class
@@ -110,12 +110,12 @@
         this.socket = liveSortable.options.socket;
 
         // Listen every event on the socket and trigger it on the stored element
-        jQuery.each(liveSortable.customEvents, function(index, customEvent) {
+        $.each(liveSortable.customEvents, function(index, customEvent) {
             self.addEvent( customEvent );
         });
 
         return this;
-    };
+    }
     SocketEventer.prototype = {
         eventHandlers: {},
         addEvent: function(eventName) {
@@ -132,7 +132,11 @@
             this.socket.removeListener(eventName, this.eventHandlers[eventName]);
         },
         removeAllEvents: function() {
-            this.socket.removeAllListeners();
+            for(var event in this.eventHandlers) {
+                if(this.eventHandlers.hasOwnProperty(event)) {
+                    this.removeEvent(event);
+                }
+            }
         }
     };
 
@@ -140,17 +144,17 @@
         LiveSortable Class
        ============================================== */
 
-    function LiveSortable( jqueryInstance, options ) {
-        this.$element = jqueryInstance;
+    function LiveSortable( element, options ) {
+        this.$element = $(element);
 
         // Plugin defaults
-        this.options = jQuery.extend({}, defaults, options);
+        this.options = $.extend({}, defaults, options);
 
         // Custom events
-        this.events = jQuery.extend({}, defaults.events, this.options.events);
+        this.events = $.extend({}, defaults.events, this.options.events);
 
         // Sortable defaults
-        this.sortableOptions = jQuery.extend({}, defaults.sortable, this.options.sortable);
+        this.sortableOptions = $.extend({}, defaults.sortable, this.options.sortable);
 
         // Start jqueryui sortable
         this.$element.sortable(this.sortableOptions);
@@ -162,7 +166,7 @@
         this._socketEventer = new SocketEventer(this);
         this.getSocket = function() {
             return this._socketEventer.socket;
-        }
+        };
 
         // Mousemove event
         if(!this.options.cancelSendingInRealtime) {
@@ -170,7 +174,7 @@
         }
 
         return this;
-    };
+    }
 
     LiveSortable.prototype = {
         isBeingDragged: false,
@@ -213,7 +217,7 @@
             return this.options[option];
         },
         toggleRealtime: function() {
-            var realtimeEventName = eventNamesFactory.addSufix("move_element");
+            var realtimeEventName = eventNamesFactory.addSufix("moving_element");
 
             if( this.toggleOption("cancelRealtime") ) {
                 this._socketEventer.removeEvent(realtimeEventName);
@@ -234,30 +238,28 @@
     };
 
     LiveSortable.getInstanceFrom = function(element) {
-        return jQuery(element).data(pluginDataName);
+        return $(element).data(pluginDataName);
     };
 
     /* ==============================================
         jQuery Plugin initialization
        ============================================== */
 
-    jQuery.fn[pluginName] = function ( options ) {
+    $.fn[pluginName] = function ( options ) {
         var isMethod = typeof options === 'string';
         if(isMethod) {
             var methodArguments = Array.prototype.slice.call(arguments, 1);
         }
 
         return this.each(function() {
-            var $this = jQuery(this);
-
             // When the first argument is a string, call a method on the instance with that string as the method name
             // Otherwise instantiate the plugin
             if (isMethod) {
-                var instance = $this.data(pluginDataName);
+                var instance = $.data(this, pluginDataName);
                 if (!instance) {
                     throw "Method called on liveSortable before instantiation";
                 }
-                if ( !jQuery.isFunction(instance[options]) ) {
+                if ( !$.isFunction(instance[options]) ) {
                     throw "The method: " + options + " was not found in liveSortable";
                 }
 
@@ -267,9 +269,12 @@
                     return returnValue;
                 }
             } else {
-                $this.data(pluginDataName, new LiveSortable($this, options));
+                // Create only one instance
+                if ( !$.data(this, pluginDataName) ) {
+                    $.data(this, pluginDataName, new LiveSortable( this, options ));
+                }
             }
         });
     };
 
-})(window, document);
+})( jQuery );

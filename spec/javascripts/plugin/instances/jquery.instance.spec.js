@@ -42,11 +42,11 @@ describe("The jquery instance", function() {
             expect(spyEvent).toHaveBeenTriggered();
         });
     });
-    it("should not trigger the move_element.liveSortable event if the cancelRealtime option is set to true", function() {
+    it("should not trigger the moving_element.liveSortable event if the cancelRealtime option is set to true", function() {
         var $newList = this.resetPlugin({ cancelRealtime: true });
 
-        var spyMoveElementEvent = spyOnEvent(this.$list, "move_element.liveSortable");
-        this.socketMock.emit("move_element.liveSortable");
+        var spyMoveElementEvent = spyOnEvent(this.$list, "moving_element.liveSortable");
+        this.socketMock.emit("moving_element.liveSortable");
 
         expect(spyMoveElementEvent).not.toHaveBeenTriggered();
     });

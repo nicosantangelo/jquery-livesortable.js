@@ -18,7 +18,7 @@ io.sockets.on('connection', function (socket) {
 	});
 
 	socket.on('broadcast_moving_element.liveSortable', function (data) {
-		socket.broadcast.emit('move_element.liveSortable', data);
+		socket.broadcast.emit('moving_element.liveSortable', data);
 	});
 
 	socket.on('broadcast_move_ended.liveSortable', function (data) {
