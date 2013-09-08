@@ -16,7 +16,7 @@
     var defaults = {
             // Realtime options
             cancelRealtime: false,
-            cancelSedingInRealtime: false,
+            cancelSendingInRealtime: false,
 
             // MouseMove event delay
             delay: 0,
@@ -165,7 +165,7 @@
         }
 
         // Mousemove event
-        if(!this.options.cancelSedingInRealtime) {
+        if(!this.options.cancelSendingInRealtime) {
             this.addMousemoveHandler();
         }
 
@@ -222,7 +222,7 @@
             }
         },
         toggleRealtimeSending: function() {
-            if( this.toggleOption("cancelSedingInRealtime") ) {
+            if( this.toggleOption("cancelSendingInRealtime") ) {
                 this.removeMousemoveHandler();
             } else {
                 this.addMousemoveHandler();

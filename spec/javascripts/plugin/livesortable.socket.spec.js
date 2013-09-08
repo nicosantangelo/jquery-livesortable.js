@@ -43,8 +43,8 @@ describe("The socket", function() {
             this.simulateMousemove();
             expect(this.socketMock.emit.calls.length).toBe(3 + 2 + 1);
         });
-        it("should not emit the liveSortable.broadcast_move_element event if the cancelSedingInRealtime option is set to true", function() {
-            this.resetPlugin({ cancelSedingInRealtime: true });
+        it("should not emit the liveSortable.broadcast_move_element event if the cancelSendingInRealtime option is set to true", function() {
+            this.resetPlugin({ cancelSendingInRealtime: true });
 
             this.simulateMousemove();
 

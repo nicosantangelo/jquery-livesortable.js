@@ -41,7 +41,7 @@ describe("The stored LiveSortable instance", function() {
         this.toggleRealtime();
         expect(spyMoveElementEvent).toHaveBeenTriggered();
     });
-    it("should toggle the cancelSedingInRealtime option on toggleRealtimeSending", function() {
+    it("should toggle the cancelSendingInRealtime option on toggleRealtimeSending", function() {
         // By default the event is handled by the object, the first toggle disables it...
         this.toggleRealtimeSending();
         expect(this.socketMock.emit).not.wasCalledWith("broadcast_moving_element.liveSortable");

@@ -13,7 +13,7 @@ Usage
 $(selector).liveSortable({
     socket: undefined, //required
     cancelRealtime: false,
-    cancelSedingInRealtime: false,
+    cancelSendingInRealtime: false,
     delay: 0,
     events: {
         start: function(event, ui, liveSortable) {},
@@ -29,7 +29,7 @@ The options are:
 
 * `cancelRealtime` – Boolean indicating if we should recieve information in realtime.
 
-* `cancelSedingInRealtime` – Boolean indicating if we should send information in mousemove.
+* `cancelSendingInRealtime` – Boolean indicating if we should send information in mousemove.
 
 * `delay` – Time in milliseconds between every send to the server on mousemove (to reduce load).
 
@@ -42,11 +42,11 @@ All events live inside the `.liveSortable` namespace, and are fired with the use
 
 ##### Emitted to the server
 
-* `broadcast_move_started.liveSortable` – Sended when the user starts dragging an element.
+* `broadcast_move_started.liveSortable` – Sent when the user starts dragging an element.
 
-* `broadcast_moving_element.liveSortable` – Sended on mousemove (depends on the delay option).
+* `broadcast_moving_element.liveSortable` – Sent on mousemove (depends on the delay option).
 
-* `broadcast_move_ended.liveSortable` – Sended when the user stops dragging an element.
+* `broadcast_move_ended.liveSortable` – Sent when the user stops dragging an element.
 
 ##### On the element ( $(selector) ) and listened on the socket
 
@@ -73,7 +73,7 @@ Toggles the cancelRealtime option
 $(selector).liveSortable("toggleRealtime");
 ```
 ##### jQuery#liveSortable("toggleRealtimeSending")
-Toggles the cancelSedingInRealtime option
+Toggles the cancelSendingInRealtime option
 
 ```javascript
 $(selector).liveSortable("toggleRealtimeSending");
@@ -90,6 +90,6 @@ $(selector).liveSortable("remove");
 That's all
 -----
 
-Probably not the best documentation, but before hating me try [the example](https://github.com/NicoSantangelo/jquery-livesortable.js/tree/master/example) or the [specs](https://github.com/NicoSantangelo/jquery-livesortable.js/tree/master/spec/javascripts). The specs are using [jasmine](http://pivotal.github.io/jasmine/), to run them you can use the [jasmine gem](https://github.com/pivotal/jasmine-gem) and then use Grunt to watch the files.
+Probably not the best documentation, but before hating me try [the example](https://github.com/NicoSantangelo/jquery-livesortable.js/tree/master/example) or the [specs](https://github.com/NicoSantangelo/jquery-livesortable.js/tree/master/spec/javascripts). The specs are using [jasmine](http://pivotal.github.io/jasmine/), to run them you can use the [jasmine gem](https://github.com/pivotal/jasmine-gem) and then use Guard to watch the files.
 
 Have a problem, bug, a new implementation ?, be sure to open an issue or a pull request!
