@@ -45,8 +45,8 @@ describe("The jquery instance", function() {
     it("should not trigger the moving_element.liveSortable event if the cancelRealtime option is set to true", function() {
         var $newList = this.resetPlugin({ cancelRealtime: true });
 
-        var spyMoveElementEvent = spyOnEvent(this.$list, "moving_element.liveSortable");
-        this.socketMock.emit("moving_element.liveSortable");
+        var spyMoveElementEvent = spyOnEvent(this.$list, this.customEvents.moving);
+        this.socketMock.emit(this.customEvents.moving);
 
         expect(spyMoveElementEvent).not.toHaveBeenTriggered();
     });
