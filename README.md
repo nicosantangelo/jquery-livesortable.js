@@ -15,6 +15,11 @@ $(selector).liveSortable({
     cancelRealtime: false,
     cancelSendingInRealtime: false,
     delay: 0,
+    eventNames: {
+        started: "move_started",
+        moving : "moving_element",
+        ended  : "move_ended"
+    },
     events: {
         start: function(event, ui, liveSortable) {},
         beforeStop: function(event, ui, liveSortable) {},
@@ -24,6 +29,7 @@ $(selector).liveSortable({
     sortable: {}
 });
 ```
+The socket is the only required parameter, the others can be skipped.
 The options are:
 * `socket` – An object witch responds to the [Socket.IO](http://socket.io) interface for events, that is `on`, `emit`, `removeListener`. You can use any object you like (check [the spec](https://github.com/NicoSantangelo/jquery-livesortable.js/blob/master/spec/javascripts/helpers/spec_helper.js#L59) for an example using jQuery events).
 
@@ -32,6 +38,8 @@ The options are:
 * `cancelSendingInRealtime` – Boolean indicating if we should send information in mousemove.
 
 * `delay` – Time in milliseconds between every send to the server on mousemove (to reduce load).
+
+* `eventNames` – Object containing the default event names. You can override any of these, and it'll be reflected in the broadcast event too (more info below)
 
 * `events` – Object with holds functions that run for every event. The return value is used as data to send to the server (if undefined it will send the default).
 
@@ -56,6 +64,23 @@ All events live inside the `.liveSortable` namespace, and are fired with the use
 
 * `move_ended.liveSortable` - Triggered when the user stops dragging an element
 
+##### Custom
+
+Remember that you can override any of the event names via `eventNames`. Doing so will change both sides, the server and element.
+
+Example:
+```javascript
+$(selector).liveSortable({
+    socket: someSocket,
+    eventNames: {
+        started: "hold_tight"
+    }
+});
+// Then, the started event will be hold_tight.liveSortable 
+// and the broadcast broadcast_hold_tight.liveSortable
+```
+
+For a little more graphic example, take a look at this [breathtaking image](https://raw.github.com/NicoSantangelo/jquery-livesortable.js/master/example.jpg).
 
 ### API
 

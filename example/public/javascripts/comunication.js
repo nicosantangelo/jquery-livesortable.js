@@ -8,6 +8,9 @@
     $teamsList.liveSortable({
         socket: io.connect('http://localhost:5000'),
         cancelRealtime: true,
+        eventNames: {
+            started: "hold_tight"
+        },
         events: {
             start: function(event, ui, liveSortable) {
                 return {
@@ -18,7 +21,7 @@
         }
     });
 
-    $teamsList.on("move_started.liveSortable", function(event, data) {
+    $teamsList.on("hold_tight.liveSortable", function(event, data) {
         var elem = document.getElementById(data.id);
         elem.style.backgroundColor = '#CCC';
         elem.style.cursor          = 'default';

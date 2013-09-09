@@ -13,8 +13,8 @@ app.get('/', function (req, res) {
 
 io.sockets.on('connection', function (socket) {
 
-	socket.on('broadcast_move_started.liveSortable', function (data) {
-		socket.broadcast.emit('move_started.liveSortable', data);
+	socket.on('broadcast_hold_tight.liveSortable', function (data) {
+		socket.broadcast.emit('hold_tight.liveSortable', data);
 	});
 
 	socket.on('broadcast_moving_element.liveSortable', function (data) {
