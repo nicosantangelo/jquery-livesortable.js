@@ -19,7 +19,7 @@ beforeEach(function() {
         }
     };
 
-    this.customEvents = {
+    this.defaultEvents = {
         started: "move_started.liveSortable", 
         moving: "moving_element.liveSortable",
         ended: "move_ended.liveSortable"
@@ -27,7 +27,7 @@ beforeEach(function() {
 
     this.forEachCustomEvent = function(fn) {
         var self = this;
-        jQuery.each(this.customEvents, function(key, customEvent) {
+        jQuery.each(this.defaultEvents, function(key, customEvent) {
             fn.call(self, customEvent);
         }); 
     };
@@ -100,9 +100,9 @@ beforeEach(function() {
         this.$firstLi = this.$list.children("li:first");
     }
 
-    this.toggleRealtime = function() {
+    this.toggleRealtime = function(emitEvent) {
         this.$list.liveSortable("toggleRealtime");
-        this.socketMock.emit(this.customEvents.moving);
+        this.socketMock.emit(emitEvent || this.defaultEvents.moving);
     };
 
     this.toggleRealtimeSending = function() {

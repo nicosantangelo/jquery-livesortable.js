@@ -29,6 +29,13 @@
                 mousemove: function() {}
             },
 
+            // Default event names
+            eventNames: {
+                started: "move_started",
+                moving : "moving_element",
+                ended  : "move_ended"
+            },
+
             // jQuery UI options
             sortable: {
                 helper: "clone",
@@ -38,7 +45,7 @@
 
                     var data = liveSortable.events.start(event, ui, liveSortable) || { id: ui.item.get(0).id };
 
-                    socket.emit( eventNamesFactory.addSufix("broadcast_move_started"), data );
+                    socket.emit( eventNamesFactory.addBroadcast(liveSortable.customEvents.started), data );
 
                     liveSortable.isBeingDragged = true;
                 },
@@ -60,7 +67,7 @@
                         };
                     }
 
-                    socket.emit( eventNamesFactory.addSufix("broadcast_move_ended"), data );
+                    socket.emit( eventNamesFactory.addBroadcast(liveSortable.customEvents.ended), data );
                 },
                 stop: function(event, ui) {
                     var liveSortable = LiveSortable.getInstanceFrom(this);
@@ -82,14 +89,17 @@
         addSufix: function(eventName) {
             return eventName + eventNamesFactory.sufix;
         },
+        addBroadcast: function(eventName) {
+            return "broadcast_" + eventName;
+        },
         create: function(liveSortable) {
-            var eventNames = ["moving_element", "move_started", "move_ended"];
+            var eventNames = { started: "", moving: "", ended: "" }
 
-            // If realtime is canceled, delete the moving_element event
-            if(liveSortable.options.cancelRealtime) {
-                eventNames = eventNames.slice(1);
-            }
-            return $.map(eventNames, this.addSufix);
+            $.each(eventNames, function(key, value) {
+                eventNames[key] = eventNamesFactory.addSufix(liveSortable.options.eventNames[key] || defaults.eventNames[key]);
+            });
+
+            return eventNames;
         }
     };
 
@@ -110,7 +120,12 @@
         this.socket = liveSortable.options.socket;
 
         // Listen every event on the socket and trigger it on the stored element
-        $.each(liveSortable.customEvents, function(index, customEvent) {
+        $.each(liveSortable.customEvents, function(key, customEvent) {
+            // If realtime is canceled, skip the moving_element event
+            if(liveSortable.options.cancelRealtime && key === "moving") {
+                return;
+            }
+
             self.addEvent( customEvent );
         });
 
@@ -194,7 +209,7 @@
                         };
                     }
 
-                    self._socketEventer.socket.emit(eventNamesFactory.addSufix("broadcast_moving_element"), data);
+                    self._socketEventer.socket.emit(eventNamesFactory.addBroadcast(self.customEvents.moving), data);
 
                     if(self.options.delay > 0) {
                         // This is not abstracted to a different function (sadly) so we retain the outer scope for the setTimeout // and "minimize" complexity for performance.
@@ -217,7 +232,7 @@
             return this.options[option];
         },
         toggleRealtime: function() {
-            var realtimeEventName = eventNamesFactory.addSufix("moving_element");
+            var realtimeEventName = this.customEvents.moving;
 
             if( this.toggleOption("cancelRealtime") ) {
                 this._socketEventer.removeEvent(realtimeEventName);
@@ -263,11 +278,7 @@
                     throw "The method: " + options + " was not found in liveSortable";
                 }
 
-                var returnValue = instance[options].apply(instance, methodArguments);
-
-                if (returnValue !== undefined) {
-                    return returnValue;
-                }
+                instance[options].apply(instance, methodArguments);
             } else {
                 // Create only one instance
                 if ( !$.data(this, pluginDataName) ) {

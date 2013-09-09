@@ -42,14 +42,16 @@ describe("The jquery instance", function() {
             expect(spyEvent).toHaveBeenTriggered();
         });
     });
+
     it("should not trigger the moving_element.liveSortable event if the cancelRealtime option is set to true", function() {
         var $newList = this.resetPlugin({ cancelRealtime: true });
 
-        var spyMoveElementEvent = spyOnEvent(this.$list, this.customEvents.moving);
-        this.socketMock.emit(this.customEvents.moving);
+        var spyMoveElementEvent = spyOnEvent(this.$list, this.defaultEvents.moving);
+        this.socketMock.emit(this.defaultEvents.moving);
 
         expect(spyMoveElementEvent).not.toHaveBeenTriggered();
     });
+
     it("should call the custom events stored in the options with three arguments", function() {
         var events = this.pluginOptions.events;
 
@@ -60,9 +62,72 @@ describe("The jquery instance", function() {
         expect( this.getLastArguments(events.beforeStop).length ).toEqual(3);
         expect( this.getLastArguments(events.stop).length ).toEqual(3);
     });
+
     it("should call the custom mousemove event", function() {
         this.simulateMousemove();
         expect( this.getLastArguments(this.pluginOptions.events.mousemove).length ).toEqual(2);
+    });
+
+    describe("when the event names are overriden", function() {
+        var newEventNames;
+        beforeEach(function() {
+            newEventNames = {
+                started: "my_started_event",
+                moving:  "my_moving_event"
+            };
+
+            this.$list.liveSortable("remove").liveSortable({
+                socket: this.socketMock,
+                eventNames: newEventNames
+            });
+
+        });
+
+        it("should leave the defaults if any of them is not provided", function() {
+            var customEvents = this.getPluginInstance().customEvents;
+            expect( customEvents.ended ).toEqual(this.defaultEvents.ended);
+        });
+
+        it("should trigger them", function() {
+            var self = this;
+
+            $.each(newEventNames, function(key, newEventName) {
+                var eventWithSufix = newEventName + ".liveSortable";
+                var spyEvent = spyOnEvent(self.$list, eventWithSufix);
+
+                self.socketMock.emit(eventWithSufix);
+                expect(spyEvent).toHaveBeenTriggered();
+            });
+        });
+
+        it("should toggle the cancelRealtime option on toggleRealtime", function() {
+            var newMovingEventName = newEventNames.moving + ".liveSortable";
+            var spyMoveElementEvent = spyOnEvent(this.$list, newMovingEventName);
+
+            // By default the event is handled by the object, the first toggle disables it...
+            this.toggleRealtime(newMovingEventName);
+            expect(spyMoveElementEvent).not.toHaveBeenTriggered();
+
+            //...the next reenables it
+            this.toggleRealtime(newMovingEventName);
+            expect(spyMoveElementEvent).toHaveBeenTriggered();
+        });
+
+        it("should emit the broadcast events with the custom names when the drag starts", function() {
+            var broadcast = "broadcast_" + newEventNames.started + ".liveSortable";
+            this.simulateDragStart();
+            expect(this.socketMock.emit).wasCalledWith( broadcast,  jasmine.any(Object) );
+
+            this.simulateDragEnd();
+            expect(this.socketMock.emit).wasCalledWith("broadcast_move_ended.liveSortable", jasmine.any(Object));
+        });
+
+        it("should emit a broadcast_moving_element.liveSortable on mousemove", function() {
+            var broadcast = "broadcast_" + newEventNames.moving + ".liveSortable";
+
+            this.simulateMousemove();
+            expect(this.socketMock.emit).wasCalledWith(broadcast, jasmine.any(Object));
+        });
     });
 
 });
