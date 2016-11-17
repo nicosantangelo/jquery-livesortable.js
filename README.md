@@ -115,6 +115,6 @@ $(selector).liveSortable("remove");
 That's all
 -----
 
-Probably not the best documentation, but before hating me try [the example](https://github.com/NicoSantangelo/jquery-livesortable.js/tree/master/example) or the [specs](https://github.com/NicoSantangelo/jquery-livesortable.js/tree/master/spec/javascripts). The specs are using [jasmine](http://pivotal.github.io/jasmine/), to run them you can use the [jasmine gem](https://github.com/pivotal/jasmine-gem) and then use Guard to watch the files.
+Probably not the best documentation, but before hating me try [the example](https://github.com/NicoSantangelo/jquery-livesortable.js/tree/master/example) or the [specs](https://github.com/NicoSantangelo/jquery-livesortable.js/tree/master/spec/javascripts). The specs are using [jasmine](https://jasmine.github.io/), to run them you can use the [jasmine gem](https://github.com/pivotal/jasmine-gem) and then use Guard to watch the files.
 
 Have a problem, bug, a new implementation ?, be sure to open an issue or a pull request!
